@@ -22,7 +22,7 @@
     <!-- IChecker -->
     <link href="Java/icheck-1.x/skins/square/red.css" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="Css/custom.min.css" rel="stylesheet">
     <!-- rangeSlider -->
     <link href="vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
     <link href="vendors/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
@@ -339,8 +339,8 @@
                       <div class="clearfix"></div>
                     </div>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <b>Sim:</b><input type="radio" class="flat " name="gender" id="genderM" value="M" checked="" required />
-                        <b>Não:</b><input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                        <input type="radio" class="flat " name="gender" id="genderM" value="M" checked="" required /><b>Sim</b> <br> <br>
+                        <input type="radio" class="flat" name="gender" id="genderF" value="F" /><b>Não</b>
                       </div>
                     </div>
                           <!-- Hidden -->
@@ -350,9 +350,8 @@
                         <h2>Quais atividades realiza?<small> Coloque a atividade e pressione Enter</small></h2>
                         <div class="clearfix"></div>
                       </div>
-                        <div class="col-md-9 col-sm-9 col-xs-12">
-                          <input type="text" data-role="tagsinput" />
-                          <div id="suggestions-container" style="position: relative; float: left; margin: 10px;"></div>
+                        <div id="tags" class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" id="example">
                         </div>
                     </div>
                   </div>
@@ -490,7 +489,7 @@
     <script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
     <script src="vendors/google-code-prettify/src/prettify.js"></script>
     <!-- jQuery Tags Input -->
-    <script src="vendors/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
+    <script src="vanilla-tags-input-master/tags-input.js"></script>=
     <!-- Switchery -->
     <script src="vendors/switchery/dist/switchery.min.js"></script>
     <!-- Select2 -->

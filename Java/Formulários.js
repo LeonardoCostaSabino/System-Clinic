@@ -166,3 +166,10 @@ $(document).ready(function(){
     increaseArea: '20%' // optional
   });
 });
+
+var instance = new TagsInput({
+    selector: 'example',
+    max : 10,
+    duplicate : true,
+    wrapperClass : 'tags-input-wrapper'
+});
