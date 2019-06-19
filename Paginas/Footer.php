@@ -45,9 +45,6 @@
 <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
 <!-- DateJS -->
 <script src="../vendors/DateJS/build/date.js"></script>
-<!-- Custom Theme Scripts -->
-<script src="../Java/custom.min.js"></script>
-<script src="../Java/Formulários.js"></script>
 <!-- FastClick -->
 <script src="../vendors/fastclick/lib/fastclick.js"></script>
 <!-- validator -->
@@ -55,7 +52,7 @@
 <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
 <!-- iChecker -->
 <script src="../Java/icheck-1.x/icheck.js"></script>
-<script src="../vendors/vanilla-tags-input-master/tags-input.js"></script>=
+
 <!-- Switchery -->
 <script src="../vendors/switchery/dist/switchery.min.js"></script>
 <!-- Select2 -->
@@ -84,7 +81,14 @@
 <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 <script src="../vendors/fullcalendar/dist/fullcalendar.min.js" type="text/javascript"></script>
 <!-- Dropzone.js -->
-<script src="vendors/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+<!-- Alert Customized -->
+<script src="../vendors/Beautiful-Animated-Modal-Window-Plugin-With-jQuery-SweetModal/docs/js/jquery.min.js"></script>
+<script src="../vendors/Beautiful-Animated-Modal-Window-Plugin-With-jQuery-SweetModal/docs/js/jquery.sweet-modal.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../Java/custom.min.js"></script>
+<script src="../Java/Formularios.js"></script>
 
   </body>
 </html>

@@ -1,7 +1,15 @@
 <?php
-$db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=123456");
-?>
+include('../PHP/ConexaoPostgree.php');
 
+$minhaConexao = new Conexao();
+
+
+
+$query = "select * from usuarios";
+$result = $minhaConexao->con->query($query);
+$usuarios = $result->fetchAll();
+foreach ($usuarios as $usuario) {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +19,7 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>System Clinic </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -47,6 +55,9 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
     <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
     <!-- Dropzone.js -->
     <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="../vendors/Beautiful-Animated-Modal-Window-Plugin-With-jQuery-SweetModal/docs/css/jquery.sweet-modal.min.css" rel="stylesheet">
+
+
     <!-- Custom Theme Style -->
     <link href="../Css/custom.min.css" rel="stylesheet">
   </head>
@@ -69,7 +80,7 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
       </div>
       <div class="profile_info">
         <span>Bem vindo,</span>
-        <h2>Usuário 1</h2>
+        <h2 ><?php print $usuario['nm_usuario'];?></h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
@@ -122,6 +133,7 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
           </li>
       </div>
     </div>
+    <button type="submit" id="Alert" class="btn btn-success">Submit</button>
     <!-- /sidebar menu -->
 
     <!-- /menu footer buttons -->
@@ -142,7 +154,6 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
     <!-- /menu footer buttons -->
   </div>
 </div>
-
 <!-- top navigation -->
 <div class="top_nav">
   <div class="nav_menu">
@@ -154,7 +165,7 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="../Imagens/Formulários/img.jpg" alt="">User
+            <img src="../Imagens/Formulários/img.jpg" alt=""> <?php print $usuario['nm_usuario']; ?>
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -192,6 +203,7 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
                 <a>
                   <strong>See All Alerts</strong>
                   <i class="fa fa-angle-right"></i>
+
                 </a>
               </div>
             </li>
@@ -201,4 +213,6 @@ $db = pg_connect("host=localhost port=5432 dbname=postgres user=sabino password=
     </nav>
   </div>
 </div>
+
+<?php } ?>
 <!-- /top navigation -->
