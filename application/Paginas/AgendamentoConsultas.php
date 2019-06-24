@@ -30,13 +30,13 @@
                   <div class="x_content">
                     <br />
                     <form id="demo-form2" name="frm" data-parsley-validate class="form-horizontal form-label-left">
-
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Data da consulta<span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="data_Consulta" name="data_Consulta" required class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
                           <h6 class="red" id="resposta"></h6>
                         </div>
+
                       </div>
                       <div class="form-group">
                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Horário de atendimento <span class="required">*</span>
@@ -105,6 +105,32 @@
             </div>
          </div>
         <!-- /page content -->
+        <script type="text/javascript">
 
+        $("#my-calendar1").zabuto_calendar(
+            {
+            language: "pt",
+            ajax: {
+                url: "../Carregar.json",
+                modal: false
+            },
+            action: function() {myDateFunction(this.id)},
+            legend:
+                [
+                    {type: "text", label: "Text", badge: "00"},
+                    {type: "block", label: "Disponivel", classname: "Livre"},
+                    {type: "block", label: "Indisponivel", classname: "Ocupado"},
+                    {type: "spacer"},
+                ],
+            cell_border: true,
+            today: true,
+            show_days: false,
+            weekstartson: 0,
+            nav_icon: {
+              prev: '<i class="fa fa-chevron-circle-left"></i>',
+              next: '<i class="fa fa-chevron-circle-right"></i>'
+            }
+        });
+        </script>
         <!-- footer content -->
     <?php include("Footer.php") ?>

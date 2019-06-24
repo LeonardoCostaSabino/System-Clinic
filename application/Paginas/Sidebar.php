@@ -64,7 +64,7 @@ if($result){
     <link href="../Css/custom.min.css" rel="stylesheet">
   </head>
 
-  <body class="nav-md">
+  <body class="nav-md" onload="generatePassword(8)" >
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -135,7 +135,6 @@ if($result){
           </li>
       </div>
     </div>
-    <button type="submit" id="Alert" class="btn btn-success">Submit</button>
     <!-- /sidebar menu -->
 
     <!-- /menu footer buttons -->

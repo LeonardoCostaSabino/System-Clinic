@@ -4,18 +4,8 @@
 <div class="right_col" role="main" style="min-height: 1054px;">
   <div class="">
     <div class="page-title">
-      <div class="title_left">
-        <h3>Calendar <small>Click to add/edit events</small></h3>
-      </div>
-      <div class="title_right">
-        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div>
-        </div>
+      <div class="col-md-12">
+        <h3>Agendamentos <small>Clique nas datas que desejam adicionar ou editar consultas</small></h3>
       </div>
   </div>
   <div class="clearfix"></div>
@@ -23,7 +13,7 @@
     <div class="col-md-12">
       <div class="x_panel">
         <div class="x_title">
-          <h2>Calendar Events <small>Sessions</small></h2>
+          <h2>Agenda de Consultas <small>Sessions</small></h2>
           <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
             </li>
@@ -42,14 +32,102 @@
           <div class="clearfix"></div>
         </div>
         <div class="x_content">
-          <div id="calendar" class="fc fc-unthemed fc-ltr"><div class="fc-toolbar fc-header-toolbar"><div class="fc-left"><div class="fc-button-group"><button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left"><span class="fc-icon fc-icon-left-single-arrow"></span></button><button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right"><span class="fc-icon fc-icon-right-single-arrow"></span></button></div><button type="button" class="fc-today- button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">today</button></div><div class="fc-right"><div class="fc-button-group"><button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left">month</button><button type="button" class="fc-agendaWeek-button fc-button fc-state-default">week</button><button type="button" class="fc-agendaDay-button fc-button fc-state-default fc-state-active">day</button><button type="button" class="fc-listMonth-button fc-button fc-state-default fc-corner-right">list</button></div></div><div class="fc-center"><h2>June 18, 2019</h2></div><div class="fc-clear"></div></div><div class="fc-view-container" style=""><div class="fc-view fc-agendaDay-view fc-agenda-view" style=""><table><thead class="fc-head"><tr><td class="fc-head-container fc-widget-header"><div class="fc-row fc-widget-header" style="border-right-width: 1px; margin-right: 14px;"><table><thead><tr><th class="fc-axis fc-widget-header" style="width:39px"></th><th class="fc-day-header fc-widget-header fc-tue fc-today" data-date="2019-06-18"><span>Tuesday</span></th></tr></thead></table></div></td></tr></thead><tbody class="fc-body"><tr><td class="fc-widget-content"><div class="fc-day-grid fc-unselectable"><div class="fc-row fc-week fc-widget-content" style="border-right-width: 1px; margin-right: 14px;"><div class="fc-bg"><table><tbody><tr><td class="fc-axis fc-widget-content" style="width:39px"><span>all-day</span></td><td class="fc-day fc-widget-content fc-tue fc-today fc-state-highlight" data-date="2019-06-18"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><tbody><tr><td class="fc-axis" style="width:39px"></td><td></td></tr></tbody></table></div></div></div><hr class="fc-divider fc-widget-header"><div class="fc-scroller fc-time-grid-container" style="overflow: hidden scroll; height: 656px;"><div class="fc-time-grid fc-unselectable"><div class="fc-bg"><table><tbody><tr><td class="fc-axis fc-widget-content" style="width:39px"></td><td class="fc-day fc-widget-content fc-tue fc-today fc-state-highlight" data-date="2019-06-18"></td></tr></tbody></table></div><div class="fc-slats"><table><tbody><tr data-time="00:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>12am</span></td><td class="fc-widget-content"></td></tr><tr data-time="00:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="01:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>1am</span></td><td class="fc-widget-content"></td></tr><tr data-time="01:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="02:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>2am</span></td><td class="fc-widget-content"></td></tr><tr data-time="02:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="03:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>3am</span></td><td class="fc-widget-content"></td></tr><tr data-time="03:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="04:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>4am</span></td><td class="fc-widget-content"></td></tr><tr data-time="04:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="05:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>5am</span></td><td class="fc-widget-content"></td></tr><tr data-time="05:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="06:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>6am</span></td><td class="fc-widget-content"></td></tr><tr data-time="06:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="07:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>7am</span></td><td class="fc-widget-content"></td></tr><tr data-time="07:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="08:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>8am</span></td><td class="fc-widget-content"></td></tr><tr data-time="08:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="09:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>9am</span></td><td class="fc-widget-content"></td></tr><tr data-time="09:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="10:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>10am</span></td><td class="fc-widget-content"></td></tr><tr data-time="10:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="11:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>11am</span></td><td class="fc-widget-content"></td></tr><tr data-time="11:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="12:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>12pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="12:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="13:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>1pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="13:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="14:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>2pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="14:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="15:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>3pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="15:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="16:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>4pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="16:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="17:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>5pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="17:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="18:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>6pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="18:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="19:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>7pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="19:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="20:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>8pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="20:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="21:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>9pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="21:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="22:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>10pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="22:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr><tr data-time="23:00:00"><td class="fc-axis fc-time fc-widget-content" style="width:39px"><span>11pm</span></td><td class="fc-widget-content"></td></tr><tr data-time="23:30:00" class="fc-minor"><td class="fc-axis fc-time fc-widget-content" style="width:39px"></td><td class="fc-widget-content"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><tbody><tr><td class="fc-axis" style="width:39px"></td><td><div class="fc-content-col"><div class="fc-event-container fc-helper-container"></div><div class="fc-event-container"><a class="fc-time-grid-event fc-v-event fc-event fc-start fc-end fc-draggable fc-resizable" style="top: 518px; bottom: -616px; z-index: 1; left: 0%; right: 0%;"><div class="fc-content"><div class="fc-time" data-start="10:30" data-full="10:30 AM"><span>10:30</span></div><div class="fc-title">Meeting</div></div><div class="fc-bg"></div><div class="fc-resizer fc-end-resizer"></div></a></div><div class="fc-highlight-container"></div><div class="fc-bgevent-container"></div><div class="fc-business-container"></div></div></td></tr></tbody></table></div><hr class="fc-divider fc-widget-header" style="display: none;"></div></div></td></tr></tbody></table></div></div></div>
+          <div id="calendar" class="fc fc-unthemed fc-ltr"></div>
+          <div class="clearfix"></div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Dados Obrigatórios</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <br />
+                  <form id="demo-form2" name="frm" data-parsley-validate class="form-horizontal form-label-left">
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Data da consulta<span class="required">*</span></label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="data_Consulta" name="data_Consulta" required class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
+                        <h6 class="red" id="resposta"></h6>
+                      </div>
+
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Horário de atendimento <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="hora_Consulta" name="hora_Consulta" required class="form-control col-md-7 col-xs-12" style="width: 25%" data-inputmask="'mask':'99:99'" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Especilidade <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select id="Espec_Consultas" name="Espec_Consultas" class="form-control" style="width: 40%">
+                          <option value="Psicologia">Psicologia</option>
+                          <option value="Ortopedia">Ortopedia</option>
+                          <option value="Clinico Geral">Clinico Geral</option>
+                          <option value="Psiquiatria">Psiquiatria</option>
+                          <option value="Ginecologista">Ginecologista</option>
+                          <option value="Fisioterapia">Fisioterapia</option>
+                          <option value="Neurologia">Neurologia</option>
+                          <option value="Fonoaudilogia">Fonoaudilogia</option>
+                          <option value="Demartologia">Demartologia</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Médico Resposavel <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select id="Medico_Consulta" name="Medico_Consulta" class="form-control" style="width: 60%">
+                          <option value="Psicologia">Psicologia</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">CRM<span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="Crm_Consultas" name="Crm_Consultas" value="<?php //Select ?>" class="date-picker form-control col-md-7 col-xs-12" disabled data-inputmask="'mask':'99-99999-9'" style="width: 23%" placeholder="<?php //Select ?>" required="required" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">CPF <span class="required">*</span></label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="CPF_Pacientes" id="CPF_Pacientes" required="required" data-inputmask="'mask':'999-999-999-99'" style="width: 30%" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Nome do Paciente <span class="required">*</span>
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input id="Nome_Pacientes" name="Nome_Pacientes" class="date-picker form-control col-md-7 col-xs-12" disabled style="width: 50%" required="required" type="text">
+                      </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <button class="btn btn-primary" type="reset">Apagar</button>
+                        <button type="submit" class="btn btn-success" onclick="Validation();">Enviar</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <?php include("Footer.php") ?>
 

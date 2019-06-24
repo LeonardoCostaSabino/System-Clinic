@@ -95,7 +95,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Senha<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="Senha_Pacientes" id="Senha" disabled class="date-picker form-control col-md-7 col-xs-12" placeholder="Senha Padrão:Clinic-Pass" value="Clinic-Pass" type="password" style="width: 30%" required="required" type="text"><small>Senha Padrão:Clinic-Pass</small>
+                        <input name="Senha_Pacientes" id="Senha1" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text"><small id="Teste">A senha gerada:</small>
                       </div>
                     </div>
                     <div class="x_panel">
@@ -157,6 +157,24 @@
     </div>
   </div>
         <!-- /page content -->
+        <script type="text/javascript">
 
+        function generatePassword(len) {
+            var pwd = [],
+                cc = String.fromCharCode,
+                R = Math.random,
+                rnd, i;
+            pwd.push(cc(48 + (0 | R() * 10))); // push a number
+            pwd.push(cc(65 + (0 | R() * 26))); // push an upper case letter
+            for (i = 2; i < len; i++) {
+                rnd = 0 | R() * 62; // generate upper OR lower OR number
+                pwd.push(cc(48 + rnd + (rnd > 9 ? 7 : 0) + (rnd > 35 ? 6 : 0)));
+            }
+            // shuffle letters in password
+            document.frm.Senha1.value = pwd.sort(function() { return R() - .5; }).join('');
+            document.getElementById("Teste").innerHTML= "A senha gerada:" + pwd.sort(function() { return R() - .5; }).join('');
+        }
+
+        </script>
         <!-- footer content -->
         <?php include("Footer.php") ?>

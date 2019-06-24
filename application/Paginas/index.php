@@ -49,7 +49,6 @@
                     <h2>Legenda</h2>
                     <div class="clearfix"></div>
                   </div>
-
                   <div class="col-md-12 col-sm-12 col-xs-6">
                     <div>
                       <p>Em andamento</p>
@@ -174,8 +173,5 @@
 
         <!-- footer content -->
         <?php include("Footer.php") ?>
-
-
-
   </body>
 </html>

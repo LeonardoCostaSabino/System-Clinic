@@ -6,6 +6,7 @@ session_start();
 // as variáveis login e senha recebem os dados digitados na página anterior
 $login = $_POST['user'];
 $senha = $_POST['senha'];
+$Lembra = $_POST['lembrar'];
 
 $connect = new Conexao();
 
@@ -22,6 +23,10 @@ $result = $connect->con->query("select * from usuarios where email_Usuario = '$l
 if($result->rowCount()>0){
   $_SESSION['login'] = $login;
   $_SESSION['senha'] = $senha;
+  if ($lembrar){
+    setcookie("Email-User","$senha");
+    setcookie("Senha-User","$login");
+  }
   header('Location:../../Paginas/index.php');
 }
 else{

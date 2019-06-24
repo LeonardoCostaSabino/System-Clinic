@@ -19,6 +19,48 @@ function toggleFullScreen() {
   }
 }
 
+// Gera uma senha complexa
+function generatePassword(len) {
+    var pwd = [],
+        cc = String.fromCharCode,
+        R = Math.random,
+        rnd, i;
+    pwd.push(cc(48 + (0 | R() * 10))); // push a number
+    pwd.push(cc(65 + (0 | R() * 26))); // push an upper case letter
+    for (i = 2; i < len; i++) {
+        rnd = 0 | R() * 62; // generate upper OR lower OR number
+        pwd.push(cc(48 + rnd + (rnd > 9 ? 7 : 0) + (rnd > 35 ? 6 : 0)));
+    }
+    // shuffle letters in password
+    document.frm.Senha1.value = pwd.sort(function() { return R() - .5; }).join('');
+}
+
+$("#my-calendar1").zabuto_calendar(
+    {
+    language: "pt",
+    ajax: {
+        url: "../Carregar.json",
+        modal: false
+    },
+    action: function() {myDateFunction(this.id)},
+    legend:
+        [
+            {type: "text", label: "Text", badge: "00"},
+            {type: "block", label: "Disponivel", classname: "Livre"},
+            {type: "block", label: "Indisponivel", classname: "Ocupado"},
+            {type: "spacer"},
+        ],
+    cell_border: true,
+    today: true,
+    show_days: false,
+    weekstartson: 0,
+    nav_icon: {
+      prev: '<i class="fa fa-chevron-circle-left"></i>',
+      next: '<i class="fa fa-chevron-circle-right"></i>'
+    }
+});
+
+
 var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
 var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
 var testAltura = /^[0-2],\d{2}$/;
@@ -167,3 +209,22 @@ $(document).ready(function(){
     increaseArea: '20%' // optional
   });
 });
+
+// Gera um número aleatório
+function returnRand() {
+    var randomization = Math.random().toString();
+    var lengthNumbers = randomization.length;
+    var sort = randomization.substring(lengthNumbers, lengthNumbers - 1);
+    return sort;
+}
+// Gera uma senha simples
+function generatePasswordEasy() {
+    var retorno = 'password';
+    var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+    retorno = letters[returnRand()].toUpperCase() + letters[returnRand()] + letters[returnRand()] +
+        returnRand() + returnRand() + returnRand();
+    return retorno;
+}
+
+
+$("#Teste").append($("#Senha").value);

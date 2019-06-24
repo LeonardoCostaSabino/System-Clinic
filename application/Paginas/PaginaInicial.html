@@ -116,7 +116,6 @@
     </div>
 
 
-
 <div  id="agenda1" class="container-fluid">
   <div class="container-fluid">
       <div class="row">
@@ -130,7 +129,6 @@
                       <option>15:00</option>
                       <option>16:00</option>
                     </select>
-
             <h1 id="tr"></h1>
               <br>
               <br>
@@ -145,43 +143,52 @@
 </div>
 
         <!-- Barra de progresso que mostra em qual etapa do cliente se encontra -->
-                    <div id="wizard" class="form_wizard wizard_horizontal">
-                      <ul class="wizard_steps">
-                        <li>
-                          <a id="volt1">
-                            <span class="step_no">1</span>
-                            <span class="step_descr">
-                                              Step 1<br />
-                                              <small>Step 1 description</small>
-                                          </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#step-2">
-                            <span class="step_no">2</span>
-                            <span class="step_descr">
-                                              Step 2<br />
-                                              <small>Step 2 description</small>
-                                          </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#step-3">
-                            <span class="step_no">3</span>
-                            <span class="step_descr">
-                                              Step 3<br />
-                                              <small>Step 3 description</small>
-                                          </span>
-                          </a>
-                        </li>
-                      </ul>
-  </div>
-    <!-- Texto no meio da imagem do contato -->
-    <div class="bgimg-3 w3-display-container" id="contact">
-      <div class="a" style="white-space:nowrap;">
-         <span class="text">CONTATO</span>
-      </div>
-    </div>
+        <div id="wizard" style="padding-right:100px" class="col-md-12 form_wizard wizard_horizontal">
+          <ul class="wizard_steps">
+            <li>
+              <a id="volt1" href="#step-2">
+                <span class="step_no">1</span>
+                <span class="step_descr">
+                                  PASSO 1<br />
+                                  <small>Escolha de especialidade</small>
+                              </span>
+              </a>
+            </li>
+            <li>
+              <a href="#step-2">
+                <span class="step_no">2</span>
+                <span class="step_descr">
+                                  PASSO 2<br />
+                                  <small>Marcar dia de consulta</small>
+                              </span>
+              </a>
+            </li>
+            <li>
+              <a href="#step-3">
+                <span class="step_no">3</span>
+                <span class="step_descr">
+                                  PASSO 3<br />
+                                  <small>Escolha de médico que realizará a consulta</small>
+                              </span>
+              </a>
+            </li>
+            <li>
+              <a href="#step-3">
+                <span class="step_no">4</span>
+                <span class="step_descr">
+                                  PASSO 4<br />
+                                  <small>Pagamento</small>
+                              </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+          <!-- Texto no meio da imagem do contato -->
+          <div class="bgimg-3 w3-display-container" id="contact">
+            <div class="a" style="white-space:nowrap;">
+               <span class="text">CONTATO</span>
+            </div>
+          </div>
 
     <!-- Conteiner com as informaçãoes para contato com a clinica correspondente -->
     <br>
@@ -249,26 +256,15 @@
         </button>
       </div>
       <div class="center modal-body">
-    <form action="index.php" method="post" role="form">
+    <form action="../../PHP/Validar_Login.php" method="post" role="form">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off" required>
-            <div class="valid-feedback">
-              Email Verificado!
-            </div>
-            <div class="invalid-feedback">
-              Email Incorreto!
-            </div>
+            <input type="email" class="form-control" id="email" name="user" placeholder="Email" autocomplete="off" required>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control is-invalid" id="password" name="password" placeholder="Password" autocomplete="off" required="">
-            <div class="valid-feedback">
-            </div>
-            <div class="invalid-feedback">
-              Senha Incorreta!
-            </div>
+                <label for="password">Senha</label>
+                <input type="password" class="form-control" id="password" name="senha" placeholder="Senha de Acesso" autocomplete="off" required>
             </div>
             <div class=" form-group">
-                <input type="checkbox" class="form-check-label" id="exampleInputText1" placeholder="Digite sua mensagem" />
+                <input type="checkbox" name="lembrar" class="form-check-label" id="exampleInputText" placeholder="Digite sua mensagem" />
                 <label>Lembrar de Mim</label>
             </div>
              <button type="submit" style="float: right" class="text-center btn btn-secondary">ENVIAR</button>
@@ -277,7 +273,7 @@
     </div>
   </div>
 </div>
-
+<div hidden>
   <div class="col-md-4">
               <div id="medic1" class="card">
                 <div class="card-horizontal">
