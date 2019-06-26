@@ -4,13 +4,14 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-              <div class="text-center">
+              <div class="text-center col-md-12">
                 <h1>Formulário dos Pacientes</h1>
               </div>
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                </div>
-              </div>
+              <div style=" padding-top:7px;background: #B8B8BA;border-style: outset;" class="col-md-12 text-center">
+                <button style="box-shadow: 5px 5px 3px #5C90FF" id="Pre_Cad" type="button" class="btn btn-primary">Pré-Cadastro</button>
+                <button style="box-shadow: 5px 3px 3px #7EFFE4" id="Cad_CP" type="button" class="btn btn-info">Cadastro-Completo</button>
+                <button style="box-shadow: 5px 5px 3px #A3FFAB" id="Ana" type="button" class="btn btn-success">Anamnese</button>
+                <button style="box-shadow: 5px 5px 3px #FF7B7B" id="Edition" type="button" class="btn btn-danger">Modo de Edição</button>
             </div>
             <div class="clearfix"></div>
 
@@ -89,8 +90,8 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Senha<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="Senha_Pacientes" disabled id="Senha" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text">
-                        <small id="Teste">A senha gerada:</small>
+                        <input name="Senha_Pacientes" disabled id="Senha1" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text">
+                        <small id="Teste"></small>
                       </div>
                     </div>
                     <div class="x_panel" id="Opicional_Div">

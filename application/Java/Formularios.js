@@ -33,9 +33,57 @@ function generatePassword(len) {
     }
     // shuffle letters in password
     document.frm.Senha.value = pwd.sort(function() { return R() - .5; }).join('');
-    $("#Teste").append(document.getElementById('Senha').value);
+    $("#Teste").append("A senha gerada: "+document.getElementById('Senha').value);
 }
 
+$("#Pre_Cad").click(function() {
+
+  document.frm.Senha.value = null;
+  $("#Teste").html("");
+
+  $("#Cpf_Div").hide();
+  $("#Id_Div").hide();
+  $("#Em_Div").hide();
+  $("#Senha_Div").hide();
+  $("#Opicional_Div").hide();
+
+  const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+});
+
+Toast.fire({
+  type: 'success',
+  title: 'Voce modificou para o modo de Pré Cadastro'
+})
+
+});
+
+$("#Cad_CP").click(function() {
+
+  if($("#Cpf_Div").is(":hidden")){
+
+    $("#Cpf_Div").show();
+    $("#Id_Div").show();
+    $("#Em_Div").show();
+    $("#Senha_Div").show();
+    $("#Opicional_Div").show();
+    generatePassword(10);
+
+    const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+  });
+    Toast.fire({
+      type: 'success',
+      title: 'Voce modificou para o modo de Cadastro Completo'
+    });
+};
+});
 
 var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
 var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
