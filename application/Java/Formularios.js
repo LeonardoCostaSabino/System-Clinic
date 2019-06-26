@@ -32,33 +32,9 @@ function generatePassword(len) {
         pwd.push(cc(48 + rnd + (rnd > 9 ? 7 : 0) + (rnd > 35 ? 6 : 0)));
     }
     // shuffle letters in password
-    document.frm.Senha1.value = pwd.sort(function() { return R() - .5; }).join('');
+    document.frm.Senha.value = pwd.sort(function() { return R() - .5; }).join('');
+    $("#Teste").append(document.getElementById('Senha').value);
 }
-
-$("#my-calendar1").zabuto_calendar(
-    {
-    language: "pt",
-    ajax: {
-        url: "../Carregar.json",
-        modal: false
-    },
-    action: function() {myDateFunction(this.id)},
-    legend:
-        [
-            {type: "text", label: "Text", badge: "00"},
-            {type: "block", label: "Disponivel", classname: "Livre"},
-            {type: "block", label: "Indisponivel", classname: "Ocupado"},
-            {type: "spacer"},
-        ],
-    cell_border: true,
-    today: true,
-    show_days: false,
-    weekstartson: 0,
-    nav_icon: {
-      prev: '<i class="fa fa-chevron-circle-left"></i>',
-      next: '<i class="fa fa-chevron-circle-right"></i>'
-    }
-});
 
 
 var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
@@ -139,68 +115,6 @@ $("#cep").focusout(function()
 			}
 		});
 	});
-/*
-function hideOrShow()
-{
-  var quest = document.formulario.sport;
-  var quest1 = document.formulario.historic;
-  var quest2 = document.formulario.contMedic;
-  var quest3 = document.formulario.recMedic;
-  var quest4 = document.formulario.anab;
-  var quest5 = document.formulario.atualRestr;
-  var quest6 = document.formulario.restr;
-
-  var tb = document.getElementById('toBeHidded');
-  var tb1 = document.getElementById('toBeHidded1');
-  var tb2 = document.getElementById('toBeHidded2');
-  var tb3 = document.getElementById('toBeHidded3');
-  var tb4 = document.getElementById('toBeHidded4');
-  var tb5 = document.getElementById('toBeHidded5');
-  var tb6 = document.getElementById('toBeHidded6');
-
-  if(quest.value == 'n'){
-    tb.style.display='none';
-  }else{
-    tb.style.display='';
-  }
-
-  if(quest1.value == 'n'){
-    tb1.style.display='none';
-  }else{
-    tb1.style.display='';
-  }
-
-  if(quest2.value == 'n'){
-    tb2.style.display='none';
-  }else{
-    tb2.style.display='';
-  }
-
-  if(quest3.value == 'n'){
-    tb3.style.display='none';
-  }else{
-    tb3.style.display='';
-  }
-
-  if(quest4.value == 'n'){
-    tb4.style.display='none';
-  }else{
-    tb4.style.display='';
-  }
-
-  if(quest5.value == 'n'){
-    tb5.style.display='none';
-  }else{
-    tb5.style.display='';
-  }
-
-  if(quest6.value == 'n'){
-    tb6.style.display='none';
-  }else{
-    tb6.style.display='';
-  }
-}
-*/
 
 $(document).ready(function(){
   $('input').iCheck({
@@ -225,6 +139,3 @@ function generatePasswordEasy() {
         returnRand() + returnRand() + returnRand();
     return retorno;
 }
-
-
-$("#Teste").append($("#Senha").value);

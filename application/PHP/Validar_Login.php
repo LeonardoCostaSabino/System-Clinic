@@ -30,8 +30,7 @@ if($result->rowCount()>0){
   header('Location:../../Paginas/index.php');
 }
 else{
-  unset ($_SESSION['login']);
-  unset ($_SESSION['senha']);
+  unset($_SESSION);
   header('Location:../../Paginas/login.php');
 }
 ?>

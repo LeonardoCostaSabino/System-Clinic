@@ -18,7 +18,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Informações Gerais <small>Dados Obrigatórios</small></h2>
+                    <h2>Informações Gerais <small>Dados Pessoais</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -36,19 +36,20 @@
                         <input type="text" name="NomeC_Pacientes" id="NomeC" required="required" style="width: 50%" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Cpf_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">CPF <span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="CPF_Pacientes" id="CPF" required="required" data-inputmask="'mask':'999-999-999-99'" style="width: 30%" class="form-control col-md-7 col-xs-12">
+                        <input type="text" name="CPF_Pacientes" id="CPF" data-inputmask="'mask':'999-999-999-99'" style="width: 30%" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">RG <span class="required">*</span></label>
+                    <div class="form-group" id="Dt_Div">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Data de Nascimento<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="RG" name="RG_Pacientes" class="form-control col-md-7 col-xs-12" style="width: 25%" data-inputmask="'mask':'99-999-999-9'" type="text">
+                        <input id="data" name="Nasce_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
+                        <h6 class="red" id="resposta"></h6>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Gen_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Genero <span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <div id="gender" class="btn-group" data-toggle="buttons">
@@ -64,14 +65,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Data de Nascimento<span class="required">*</span></label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="data" name="Nasce_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
-                        <h6 class="red" id="resposta"></h6>
-                      </div>
-                    </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Id_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Idade<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
@@ -79,26 +73,27 @@
                         <h5 class="red"></h5>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Tel_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Telefone para Contato<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input name="tel_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'(99) 9999-9999'" style="width: 30%" required="required" type="text">
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Em_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Email<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input name="email_Pacientes" class="date-picker form-control col-md-7 col-xs-12" style="width: 50%" required="required" type="text">
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="Senha_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Senha<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="Senha_Pacientes" id="Senha1" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text"><small id="Teste">A senha gerada:</small>
+                        <input name="Senha_Pacientes" disabled id="Senha" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text">
+                        <small id="Teste">A senha gerada:</small>
                       </div>
                     </div>
-                    <div class="x_panel">
+                    <div class="x_panel" id="Opicional_Div">
                       <div class="x_title">
                         <h2>Informações Especificas<small> Dados Opcionias</small></h2>
                         <div class="clearfix"></div>

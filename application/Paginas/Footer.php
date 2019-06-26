@@ -85,10 +85,9 @@
 <!-- Dropzone.js -->
 <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
 <!-- Alert Customized -->
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <!-- Custom Theme Scripts -->
 <script src="../Java/custom.min.js"></script>
 <script src="../Java/Formularios.js"></script>
-<script src="../Java/zabuto_calendar.min.js"></script>
   </body>
 </html>
