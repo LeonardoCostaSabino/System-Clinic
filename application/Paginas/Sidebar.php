@@ -64,7 +64,7 @@ if($result){
     <link href="../Css/custom.min.css" rel="stylesheet">
   </head>
 
-  <body class="nav-md" onload="generatePassword(8)" >
+  <body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">

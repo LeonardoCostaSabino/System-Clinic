@@ -1,3 +1,16 @@
+var Type_Cad;
+var Senha;
+
+$("#cadastrarPaciente").click(function(){
+  generatePassword(8);
+Swal.fire({
+  type: "success",
+  title: 'Parabens cadastro realizado com sucesso',
+  text: "Sua senha de primeiro acesso é " + Senha,
+})
+   $("#FormInfoG_Pacientes").serialize();
+});
+
 function toggleFullScreen() {
   if ((document.fullScreenElement && document.fullScreenElement !== null) ||
    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
@@ -32,14 +45,14 @@ function generatePassword(len) {
         pwd.push(cc(48 + rnd + (rnd > 9 ? 7 : 0) + (rnd > 35 ? 6 : 0)));
     }
     // shuffle letters in password
-    document.frm.Senha.value = pwd.sort(function() { return R() - .5; }).join('');
-    $("#Teste").append("A senha gerada: "+document.getElementById('Senha').value);
+    Senha = pwd.sort(function() { return R() - .5; }).join('');
+    document.frm.Senha.value = Senha;
 }
 
 $("#Pre_Cad").click(function() {
 
-  document.frm.Senha.value = null;
-  $("#Teste").html("");
+if(!$("#Cpf_Div").is(":hidden")){
+  Type_Cad = "Pre-Cadastro";
 
   $("#Cpf_Div").hide();
   $("#Id_Div").hide();
@@ -58,10 +71,12 @@ Toast.fire({
   type: 'success',
   title: 'Voce modificou para o modo de Pré Cadastro'
 })
-
+};
 });
 
 $("#Cad_CP").click(function() {
+
+  Type_Cad = "Cadastro-Completo"
 
   if($("#Cpf_Div").is(":hidden")){
 
@@ -70,7 +85,6 @@ $("#Cad_CP").click(function() {
     $("#Em_Div").show();
     $("#Senha_Div").show();
     $("#Opicional_Div").show();
-    generatePassword(10);
 
     const Toast = Swal.mixin({
     toast: true,
@@ -84,6 +98,8 @@ $("#Cad_CP").click(function() {
     });
 };
 });
+
+
 
 var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
 var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;

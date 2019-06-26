@@ -1,17 +1,17 @@
         <?php include("Sidebar.php") ?>
 
         <!-- page content -->
-        <div class="right_col" role="main">
+        <div onload="" class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="text-center col-md-12">
                 <h1>Formulário dos Pacientes</h1>
               </div>
               <div style=" padding-top:7px;background: #B8B8BA;border-style: outset;" class="col-md-12 text-center">
-                <button style="box-shadow: 5px 5px 3px #5C90FF" id="Pre_Cad" type="button" class="btn btn-primary">Pré-Cadastro</button>
-                <button style="box-shadow: 5px 3px 3px #7EFFE4" id="Cad_CP" type="button" class="btn btn-info">Cadastro-Completo</button>
-                <button style="box-shadow: 5px 5px 3px #A3FFAB" id="Ana" type="button" class="btn btn-success">Anamnese</button>
-                <button style="box-shadow: 5px 5px 3px #FF7B7B" id="Edition" type="button" class="btn btn-danger">Modo de Edição</button>
+                <button style="box-shadow: 5px 5px 3px #e0ebeb" id="Pre_Cad" type="button" class="btn btn-dark">Pré-Cadastro</button>
+                <button style="box-shadow: 5px 5px 3px #e0ebeb" id="Cad_CP" type="button" class="btn btn-dark">Cadastro-Completo</button>
+                <button style="box-shadow: 5px 5px 3px #e0ebeb" id="Ana" type="button" class="btn btn-dark">Anamnese</button>
+                <button style="box-shadow: 5px 5px 3px #e0ebeb" id="Edition" type="button" class="btn btn-dark">Modo de Edição</button>
             </div>
             <div class="clearfix"></div>
 
@@ -30,7 +30,7 @@
                   </div>
                   <div class="x_content">
                   <br />
-                  <form method="post" id="FormInfoG_Pacientes" action="../PHP/InserirPaciente.php" name="frm"  class="form-horizontal form-label-left">
+                  <form method="post" id="FormInfoG_Pacientes" name="frm"  class="form-horizontal form-label-left">
                     <div class="form-group">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Nome Completo <span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
@@ -46,7 +46,7 @@
                     <div class="form-group" id="Dt_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Data de Nascimento<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="data" name="Nasce_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
+                        <input id="data" name="Nasce_Pacientes" required class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
                         <h6 class="red" id="resposta"></h6>
                       </div>
                     </div>
@@ -70,7 +70,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Idade<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="idade" name="Idade_Pacientes" class="date-picker form-control col-md-7 col-xs-12" disabled style="width: 20%" type=number>
+                        <input id="idade" name="Idade_Pacientes" class="date-picker form-control col-md-7 col-xs-12" readonly style="width: 20%" type=number>
                         <h5 class="red"></h5>
                       </div>
                     </div>
@@ -83,14 +83,14 @@
                     <div class="form-group" id="Em_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Email<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="email_Pacientes" class="date-picker form-control col-md-7 col-xs-12" style="width: 50%" required="required" type="text">
+                        <input name="email_Pacientes" class="date-picker form-control col-md-7 col-xs-12" style="width: 50%" type="text">
                       </div>
                     </div>
                     <div class="form-group" id="Senha_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Senha<span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="Senha_Pacientes" disabled id="Senha1" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" required="required" type="text">
+                        <input name="Senha_Pacientes" readonly id="Senha" class="date-picker form-control col-md-7 col-xs-12" value="" type="password" style="width: 30%" type="text">
                         <small id="Teste"></small>
                       </div>
                     </div>
@@ -143,6 +143,7 @@
                       </div>
                     </div>
                   </div>
+                  <button type="button" class="btn btn-primary btn-block" id="cadastrarPaciente" >Cadastrar</button>
                 </form>
                 </div>
               </div>
@@ -152,25 +153,6 @@
       </div>
     </div>
   </div>
-        <!-- /page content -->
-        <script type="text/javascript">
 
-        function generatePassword(len) {
-            var pwd = [],
-                cc = String.fromCharCode,
-                R = Math.random,
-                rnd, i;
-            pwd.push(cc(48 + (0 | R() * 10))); // push a number
-            pwd.push(cc(65 + (0 | R() * 26))); // push an upper case letter
-            for (i = 2; i < len; i++) {
-                rnd = 0 | R() * 62; // generate upper OR lower OR number
-                pwd.push(cc(48 + rnd + (rnd > 9 ? 7 : 0) + (rnd > 35 ? 6 : 0)));
-            }
-            // shuffle letters in password
-            document.frm.Senha1.value = pwd.sort(function() { return R() - .5; }).join('');
-            document.getElementById("Teste").innerHTML= "A senha gerada:" + pwd.sort(function() { return R() - .5; }).join('');
-        }
-
-        </script>
         <!-- footer content -->
         <?php include("Footer.php") ?>

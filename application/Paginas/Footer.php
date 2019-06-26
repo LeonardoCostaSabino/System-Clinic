@@ -87,7 +87,7 @@
 <!-- Alert Customized -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <!-- Custom Theme Scripts -->
-<script src="../Java/custom.min.js"></script>
+<script src="../Java/custom.min.js?767361"></script>
 <script src="../Java/Formularios.js"></script>
   </body>
 </html>
