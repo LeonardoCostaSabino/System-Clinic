@@ -1,17 +1,29 @@
+                 //Declaração de Variavel para Execução dos Scripts
+
 var Type_Cad;
 var Senha;
+var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
+var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
+var testAltura = /^[0-2],\d{2}$/;
 
+//Submit (formulário de Pacientes)
 $("#cadastrarPaciente").click(function(){
   generatePassword(8);
-Swal.fire({
+Swal.fire
+({
+  allowOutsideClick: false,
+  allowEscapeKey: false,
   type: "success",
   title: 'Parabens cadastro realizado com sucesso',
   text: "Sua senha de primeiro acesso é " + Senha,
-})
+  confirmButtonText: "OK!"
+});
    $("#FormInfoG_Pacientes").serialize();
 });
 
-function toggleFullScreen() {
+//Habilita a função de Mudança de para o modo tela cheia
+function toggleFullScreen()
+{
   if ((document.fullScreenElement && document.fullScreenElement !== null) ||
    (!document.mozFullScreen && !document.webkitIsFullScreen)) {
     if (document.documentElement.requestFullScreen) {
@@ -30,10 +42,11 @@ function toggleFullScreen() {
       document.webkitCancelFullScreen();
     }
   }
-}
+};
 
-// Gera uma senha complexa
-function generatePassword(len) {
+// Gerador de uma senha
+function generatePassword(len)
+{
     var pwd = [],
         cc = String.fromCharCode,
         R = Math.random,
@@ -47,9 +60,11 @@ function generatePassword(len) {
     // shuffle letters in password
     Senha = pwd.sort(function() { return R() - .5; }).join('');
     document.frm.Senha.value = Senha;
-}
+};
 
-$("#Pre_Cad").click(function() {
+// Modifica o Formulário para pré-cadastro (formulário de Pacientes)
+$("#Pre_Cad").click(function()
+{
 
 if(!$("#Cpf_Div").is(":hidden")){
   Type_Cad = "Pre-Cadastro";
@@ -74,7 +89,9 @@ Toast.fire({
 };
 });
 
-$("#Cad_CP").click(function() {
+//Modifica o Formulário para cadastro-completo (formulário de Pacientes)
+$("#Cad_CP").click(function()
+{
 
   Type_Cad = "Cadastro-Completo"
 
@@ -99,13 +116,7 @@ $("#Cad_CP").click(function() {
 };
 });
 
-
-
-var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
-var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
-var testAltura = /^[0-2],\d{2}$/;
-
-
+//Mensagem de erro após a validação da Data (formulário de Pacientes)
 function Mensagem_Erro_Date(dat)
 {
   var OK = RegexDate.exec(dat.value);
@@ -116,7 +127,7 @@ function Mensagem_Erro_Date(dat)
   }
 }
 
-
+//Calcula o Campo Idade do Formulário de cadastro da pessoa (formulário de Pacientes)
 function calculateAge(dobString)
 {
   var dob = new Date(dobString);
@@ -131,6 +142,7 @@ function calculateAge(dobString)
   return age;
   }
 
+//Verifica os Dados do formulário para calcular a idade (formulário de Pacientes)
 function calcular(data)
 {
   var data = document.frm.data.value;
@@ -139,18 +151,7 @@ function calcular(data)
   document.frm.idade.value = (calculateAge(junta));
 }
 
-function Validation()
-{
-  if($("#Pass1").val() != $("#Pass2").val())
-    {
-      alert("Senhas não conferem");
-    }
-    else
-    {
-      alert("Cadastro realizado com sucesso");
-    }
-}
-
+//Gera os campos de endereço após o usuário digitar o Cep (Formulário de Funcionários)
 $("#cep").focusout(function()
   {
 		//Início do Comando AJAX
@@ -180,6 +181,7 @@ $("#cep").focusout(function()
 		});
 	});
 
+//Gera o Campo de Check-Box (formulário de Pacientes)
 $(document).ready(function(){
   $('input').iCheck({
     checkboxClass: 'icheckbox_square-red',
@@ -195,6 +197,7 @@ function returnRand() {
     var sort = randomization.substring(lengthNumbers, lengthNumbers - 1);
     return sort;
 }
+
 // Gera uma senha simples
 function generatePasswordEasy() {
     var retorno = 'password';

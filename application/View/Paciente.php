@@ -1,4 +1,4 @@
-        <?php include("Sidebar.php") ?>
+        <?php include("Header.php") ?>
 
         <!-- page content -->
         <div onload="" class="right_col" role="main">

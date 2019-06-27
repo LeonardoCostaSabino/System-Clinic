@@ -1,4 +1,4 @@
-<?php include("Sidebar.php") ?>
+<?php include("Header.php") ?>
 
 
 <div class="right_col" role="main" style="min-height: 1054px;">

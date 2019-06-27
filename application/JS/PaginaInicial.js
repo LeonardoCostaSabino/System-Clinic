@@ -1,19 +1,4 @@
-// Mudar a aparencia do menu superior quando desce a pagina
-
-function myFunction() {
-
-    var navbar = document.getElementById("myNavbar");
-
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
-    {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-black";
-    }
-     else
-    {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-black", "");
-    }
-}
-// Mostrar o menu em pequenas telas
+// Mostrar o menu em pequenas telas (Precisa Alterar)
 function toggleFunction() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1)
@@ -25,10 +10,12 @@ function toggleFunction() {
     }
 }
 
+//Para de mostrar o Div (Agenda)
 $(document).ready(function(){
     $("#agenda1").hide();
 });
 
+//Modificação do Div para mostrar o PASSO 2 do Processo de agendamento
 $(document).ready(function(){
     $("#PSI").click(function(){
         $("#tbagendamento").toggle();
@@ -36,7 +23,7 @@ $(document).ready(function(){
       });
   });
 
-
+//Definição de classes para personalização do Calendário
 $(document).ready(function () {
 var eventData = [
   {"date":"2019-05-01","badge":false,"title":"Example 1",classname:"Livre"},
@@ -77,7 +64,7 @@ function myDateFunction(id) {
     });
 });
 
-
+//Verifica se o calendário já está ativo e Modifica a DIV
 $(document).ready(function(){
     $("#volt1").click(function(){
     if($("#tbagendamento").is(":hidden")){
@@ -87,16 +74,7 @@ $(document).ready(function(){
       });
   });
 
-  
-
-  function showRange(){
-    var range = document.formulario.range;
-    var p = document.getElementById('numRange');
-    p.style.paddingLeft='40px';
-    p.innerHTML = range.value;
-  }
-
-// construindo o calendário
+// Constroi o calendário
 function popdate(obj,div,tam,ddd)
 {
     if (ddd)
@@ -209,7 +187,9 @@ function pop_year(obj, div, tam, umonth)
 
 // função para fechar o calendário
 function force_close(div)
-    { div2 = eval (div); div2.innerHTML = ''}
+{
+  div2 = eval (div); div2.innerHTML = ''
+}
 
 // função para fechar o calendário e setar a data no campo de data associado
 function block(data, obj, div)

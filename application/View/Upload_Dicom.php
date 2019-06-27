@@ -1,4 +1,4 @@
-          <?php include("Sidebar.php") ?>
+          <?php include("Header.php") ?>
         <!-- /top navigation -->
 
         <!-- page content -->

@@ -1,4 +1,5 @@
 <?php
+/*
 include('../PHP/ConexaoPostgree.php');
 include('../PHP/Configuraçoes.php');
 
@@ -11,6 +12,7 @@ if($result){
   $usuario = $result->fetch();
 }
 
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +24,6 @@ if($result){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>System Clinic </title>
-
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,18 +42,10 @@ if($result){
     <!-- Switchery -->
     <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- IChecker -->
-    <link href="../Java/icheck-1.x/skins/square/red.css" rel="stylesheet">
-    <!-- Custom Theme Style -->
-    <link href="../Css/custom.min.css" rel="stylesheet">
+    <link href="../vendors/icheck-1.x/skins/square/red.css" rel="stylesheet">
     <!-- rangeSlider -->
     <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
     <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <!-- fullcalendar -->
     <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
     <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
@@ -61,7 +54,7 @@ if($result){
 
 
     <!-- Custom Theme Style -->
-    <link href="../Css/custom.min.css" rel="stylesheet">
+    <link href="../Css/Admin_System.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -70,7 +63,7 @@ if($result){
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-user-md"></i> <span>System Clinic</span></a>
+              <a href="" class="site_title"><i class="fa fa-user-md"></i> <span>System Clinic</span></a>
             </div>
 
     <div class="clearfix"></div>
@@ -82,7 +75,7 @@ if($result){
       </div>
       <div class="profile_info">
         <span>Bem vindo,</span>
-        <h2 ><?php print !empty($usuario) ? $usuario['nm_usuario'] : '';?></h2>
+        <h2 >Vai Ser AJAX</h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
@@ -94,31 +87,34 @@ if($result){
       <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
-          <li><a href="index.php"><i class="fa fa-home"></i> Home</a>
+          <li><a href="System_Administer.php"><i class="fa fa-home"></i> Home</a>
           </li>
-          <li><a><i class="fa fa-edit"></i> Formulários <span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-edit"></i> Nome <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="CadastroPaciente.php">Cadastro de Pacientes</a></li>
-              <li><a href="AgendamentoConsultas.php">Cadastro de Consultas</a></li>
-              <li><a href="CadastroFuncionario.php">Cadastro de Funcionários</a></li>
-              <li><a href="Permissões.php">Modificação de Permissões</a></li>
-              <li><a href="UploadDICOM.php">Upload de DICOM</a></li>
-              <li><a href="CadastroProntuario.php">Cadastro de Prontuário</a></li>
+              <li><a href="Paciente.php"><i class="fa fa-child" aria-hidden="true"></i>Pacientes</a></li>
+              <li><a><i class="fa fa-book"></i>Consultas</a>
+                  <ul class="nav child_menu">
+                    <li><a href="Agendamento_Consulta.php"><i class="fa fa-calendar-check-o"></i>Agendamento de consultas</a>
+                    <li><a href="Agendamento_Calendar.php"><i class="fa fa-calendar"></i>Visualizar consultas</a>
+                  </ul>
+              </li>
+              <li><a href="Funcionario.php"><i class="fa fa-user"></i>Funcionários</a></li>
+              <li><a href="Prontuario.php"><i class="fa fa-file-o"></i>Prontuário</a></li>
+              <li><a href="Clinicas.php"><i class="fa fa-hospital-o"></i>Clinicas</a></li>
+              <li><a href="Dicom.php"><i class="fa fa-camera-retro"></i>Dicom</a></li>
             </ul>
           </li>
-          <li><a><i class="	fa fa-calendar"></i> Agendas <span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-file-text-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="Calendar.php">Calendário</a></li>
-              <li><a href="PaginaInicial.html">Pagina de Agendamento</a></li>
+              <li><a>Relatório.PDF</a></li>
+              <li><a>Relatório.PDF</a></li>
             </ul>
           </li>
-          <li><a><i class="fa fa-table"></i> Tabelas <span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-globe"></i> Funções Adicionais <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="tables.html">Todas as tabelas</a></li>
-              <li><a href="TabelasConsult.php">Tabela de Consultas</a></li>
-              <li><a href="TabelasPacient.php">Tabela de Pacientes</a></li>
-              <li><a href="TabelasFunc.php">Tabela de Funcionários</a></li>
-              <li><a href="TabelaGroups.php">Tabela de Grupos de permissão</a></li>
+              <li><a>N.E</a></li>
+              <li><a>N.E</a></li>
+              <li><a>N.E</a></li>
             </ul>
           </li>
         </ul>
@@ -126,11 +122,11 @@ if($result){
       <div class="menu_section">
         <h3>Config</h3>
         <ul class="nav side-menu">
-          <li><a><i class="fa fa-bug"></i> Paginas Adicionais <span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-bug"></i> Genrenciamento <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="PaginaInicial.html">Pagina de Agendamento</a></li>
-              <li><a href="profile.html">Sobre nós</a></li>
-              <li><a href="login.html">Login</a></li>
+              <li><a href="Consult_Dados.php">Pagina de Agendamento</a></li>
+              <li><a href="Admin_Permissao.php">Modificação de Permissões</a></li>
+              <li><a href="Biográfia.html">Sobre nós</a></li>
             </ul>
           </li>
       </div>
@@ -148,7 +144,7 @@ if($result){
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+      <a data-toggle="tooltip" data-placement="top" title="Logout" href="Login.php">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
     </div>
@@ -166,21 +162,15 @@ if($result){
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="../Imagens/Formulários/img.jpg" alt=""> <?php print !empty($usuario) ? $usuario['nm_usuario']  : '' ; ?>
+            <img src="../Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
-            <li><a href="javascript:;">Perfil</a></li>
-            <li>
-              <a href="javascript:;">
-                <span>Configurações</span>
-              </a>
-            </li>
-            <li><a href="javascript:;">Ajuda</a></li>
-            <li><a href="login.php" onclick=" <?php $config->Logout(); ?>"><i onclick="<?php $config->Logout(); ?>" class="fa fa-sign-out pull-right"></i>Sair</a></li>
+            <li><a href="">Perfil</a></li>
+            <li><a onclick="HelpModal()" class="fa fa-info-circle" > Ajuda</a></li>
+            <li><a onclick="SairModal()" class="fa fa-sign-out pull-right"></i> Sair</a></li>
           </ul>
         </li>
-
         <li role="presentation" class="dropdown">
           <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-envelope-o"></i>
@@ -204,7 +194,6 @@ if($result){
                 <a>
                   <strong>See All Alerts</strong>
                   <i class="fa fa-angle-right"></i>
-
                 </a>
               </div>
             </li>
