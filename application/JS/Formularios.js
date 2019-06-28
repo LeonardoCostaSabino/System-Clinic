@@ -6,19 +6,63 @@ var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2
 var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
 var testAltura = /^[0-2],\d{2}$/;
 
+//Gera o Campo de Check-Box (formulário de Pacientes)
+$(document).ready(function(){
+  $("#resposta").hide();
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_square-red',
+    radioClass: 'iradio_square-red',
+    increaseArea: '20%' // optional
+  });
+  $.validate({
+  validateOnBlur : true,
+});
+});
+
+// function Validar_Date(data){
+//   if (RegexDate.test($(data)) || $(data).value == "" )
+//   {
+//     return true;
+//   }
+//   else{
+//     $("#resposta").show();
+//     return false;
+//   }
+// }
+//
+// function Validar_Nome(Nome){
+//   id
+// }
+
 //Submit (formulário de Pacientes)
 $("#cadastrarPaciente").click(function(){
-  generatePassword(8);
-Swal.fire
-({
-  allowOutsideClick: false,
-  allowEscapeKey: false,
-  type: "success",
-  title: 'Parabens cadastro realizado com sucesso',
-  text: "Sua senha de primeiro acesso é " + Senha,
-  confirmButtonText: "OK!"
-});
-   $("#FormInfoG_Pacientes").serialize();
+
+  if(! $("#Cpf_Div").is(":hidden")){
+
+    $("#CPF").attr ('data-validation="length"' ,'data-validation-length="min11"')
+    generatePassword(8);
+    Swal.fire
+    ({
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      type: "success",
+      title: 'Parabens cadastro realizado com sucesso',
+      text: "Sua senha de primeiro acesso é " + Senha,
+      confirmButtonText: "OK!"
+    });
+       $("#FormInfoG_Pacientes").serialize();
+    }
+  else  {
+    Swal.fire
+    ({
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      type: "success",
+      title: 'Parabens cadastro realizado com sucesso',
+      confirmButtonText: "OK!"
+    });
+       $("#FormInfoG_Pacientes").serialize();
+  }
 });
 
 //Habilita a função de Mudança de para o modo tela cheia
@@ -64,29 +108,29 @@ function generatePassword(len)
 
 // Modifica o Formulário para pré-cadastro (formulário de Pacientes)
 $("#Pre_Cad").click(function()
+
 {
+  document.frm.Senha.value = null
+  if(!$("#Cpf_Div").is(":hidden")){
 
-if(!$("#Cpf_Div").is(":hidden")){
-  Type_Cad = "Pre-Cadastro";
+    $("#Cpf_Div").hide();
+    $("#Id_Div").hide();
+    $("#Em_Div").hide();
+    $("#Senha_Div").hide();
+    $("#Opicional_Div").hide();
 
-  $("#Cpf_Div").hide();
-  $("#Id_Div").hide();
-  $("#Em_Div").hide();
-  $("#Senha_Div").hide();
-  $("#Opicional_Div").hide();
+    const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+  });
 
-  const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000
-});
-
-Toast.fire({
-  type: 'success',
-  title: 'Voce modificou para o modo de Pré Cadastro'
-})
-};
+  Toast.fire({
+    type: 'success',
+    title: 'Voce modificou para o modo de Pré Cadastro'
+  })
+  };
 });
 
 //Modifica o Formulário para cadastro-completo (formulário de Pacientes)
@@ -180,15 +224,6 @@ $("#cep").focusout(function()
 			}
 		});
 	});
-
-//Gera o Campo de Check-Box (formulário de Pacientes)
-$(document).ready(function(){
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_square-red',
-    radioClass: 'iradio_square-red',
-    increaseArea: '20%' // optional
-  });
-});
 
 // Gera um número aleatório
 function returnRand() {

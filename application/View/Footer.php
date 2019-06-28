@@ -69,8 +69,11 @@
 <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
 <!-- Alert Customized -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../JS/Admin_System.js"></script>
-<script src="../JS/Formularios.js?123456"></script>
+<script src="../JS/Formularios.js?Now()"></script>
+<script src="../JS/Logout.js?Now()"></script>
   </body>
 </html>

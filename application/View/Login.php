@@ -18,7 +18,7 @@
     <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../Css/custom.min.css" rel="stylesheet">
+    <link href="../Css/Admin_System.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -29,22 +29,22 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form action="../../PHP/Validar_Login.php" method="post">
-              <h1>Medic Login</h1>
+            <h2 id="MensagemErro">Usuário ou senha errados!</h2>
+            <form id="Login" method="post">
+              <h1>System Login</h1>
               <div>
-                <input type="text" name="user" class="form-control" placeholder="CPF" required="" />
+                <input type="text" id="user" name="user" class="form-control" placeholder="CPF" required="" />
               </div>
               <div>
-                <input type="password" name="senha" class="form-control" placeholder="Senha" required="" />
+                <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required="" />
               </div>
               <div>
-                <button type="submit">Entrar
+                <button type="button" class="btn btn-success" id="logar">Entrar</button>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-
 
                 <div>
                   <h1><i class="fa fa-desktop"></i> System Medic Clinic</h1>
@@ -57,4 +57,6 @@
       </div>
     </div>
   </body>
+  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../JS/Login.js"></script>
 </html>

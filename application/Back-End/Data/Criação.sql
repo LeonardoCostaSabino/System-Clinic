@@ -1,8 +1,8 @@
 create table Grupos_de_Permissao (
-      idGrupos int PRIMARY KEY not null, --Id de registro do grupo
-      nm_Grupo varchar(45) not null, --Nome do grupo criado
-      Desc_grupo varchar(255) --Descrição das atividades e permissões
-);
+        idGrupos int PRIMARY KEY not null, --Id de registro do grupo
+        nm_Grupo varchar(45) not null, --Nome do grupo criado
+        Desc_grupo varchar(255) --Descrição das atividades e permissões
+  );
 create table Pacientes (
     cpf_Paciente int unique PRIMARY KEY not null, --CPF Paciente
     nm_Paciente  varchar(75) not null , --Nome do Paciente
@@ -75,5 +75,14 @@ create table Usuarios (
   email_Usuario varchar(45) not null unique ,
   senha_Usuario varchar(25) not null unique
 );
+
+-- create table Acesso (
+--   idAcesso serial not null unique primary KEY ,
+--   user_Acesso varchar(45) not null unique ,
+--   senha_Acesso varchar(45) not null unique ,
+--   Tentativa_Acesso int not null ,
+--   logado_Acesso boolean not null default false
+--   Time_Acesso time default CURRENT_TIMESTAMP
+-- );
 
 insert into usuarios (nick_Usuario, nm_Usuario, email_Usuario, senha_Usuario) values ('BUTU', 'Leonardo Sabino', 'leonardo.sabino@unisuam.edu.br', '123456')

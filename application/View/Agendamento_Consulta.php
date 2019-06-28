@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Exportando a Biblioteca do w3.css -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,20 +19,16 @@
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
 <!-- Importando biblioteca de funcões usadas no site -->
-<script type="text/javascript" src="../Java/PaginaInicial.js"></script>
+<script type="text/javascript" src="../JS/PaginaInicial.js"></script>
 
 <!-- Importando um arquivo css de algumas especificidades -->
 <link rel="stylesheet" href="../Css/Pagina_Inicial.css">
 
-<script src="../Java/validator.js"></script>
-
-<script src="../Java/stepbar.js"></script>
-
-<script src="../Java/zabuto_calendar.min.js"></script>
+<script src="../JS/zabuto_calendar.js"></script>
 
 <!-- jQuery Smart Wizard -->
 <script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
-<link rel="stylesheet" type="text/css" href="../Css/zabuto_calendar.min.css">
+<link rel="stylesheet" type="text/css" href="../Css/zabuto_calendar.css">
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 

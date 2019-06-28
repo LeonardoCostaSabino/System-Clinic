@@ -13,9 +13,19 @@ class Config
   }
 
   function Logout(){
-    unset($_SESSION['login']);
-    unset($_SESSION['senha']);
-    header('Location:../../Paginas/login.php');
+    session_start();
+    session_destroy();
+    header('Location: ../View/Login.php');
+    exit();
+  }
+
+  function seguranca(){
+    session_start();
+    if(empty($_SESSION['dados_usuarios'])){
+    header("Location: ../../View/Login.php");
+    exit;
+    }
+
   }
 
 

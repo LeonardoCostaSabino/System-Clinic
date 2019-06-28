@@ -1,19 +1,3 @@
-<?php
-/*
-include('../PHP/ConexaoPostgree.php');
-include('../PHP/Configuraçoes.php');
-
-$config = new Config();
-$minhaConexao = new Conexao();
-
-$query = "select * from usuarios WHERE nick_Usuario = 'BUTU'";
-$result = $minhaConexao->con->query($query);
-if($result){
-  $usuario = $result->fetch();
-}
-
-*/
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,6 +35,7 @@ if($result){
     <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
     <!-- Dropzone.js -->
     <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css">
 
 
     <!-- Custom Theme Style -->
@@ -75,7 +60,7 @@ if($result){
       </div>
       <div class="profile_info">
         <span>Bem vindo,</span>
-        <h2 >Vai Ser AJAX</h2>
+        <h2 id="Prof" >Vai Ser AJAX</h2>
       </div>
     </div>
     <!-- /menu profile quick info -->
@@ -144,7 +129,7 @@ if($result){
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" href="Login.php">
+      <a data-toggle="tooltip" data-placement="top" title="Logout" href="../PHP/Logout.php">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
     </div>
@@ -168,7 +153,7 @@ if($result){
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="">Perfil</a></li>
             <li><a onclick="HelpModal()" class="fa fa-info-circle" > Ajuda</a></li>
-            <li><a onclick="SairModal()" class="fa fa-sign-out pull-right"></i> Sair</a></li>
+            <li><a href="../PHP/Logout.php" class="fa fa-sign-out pull-right"></i> Sair</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown">

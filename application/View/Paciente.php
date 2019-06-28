@@ -34,7 +34,7 @@
                     <div class="form-group">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Nome Completo <span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="NomeC_Pacientes" id="NomeC" required="required" style="width: 50%" class="form-control col-md-7 col-xs-12">
+                        <input type="text" name="NomeC_Pacientes" id="NomeC" data-validation="required" style="width: 50%" class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
                     <div class="form-group" id="Cpf_Div">
@@ -47,7 +47,7 @@
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Data de Nascimento<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
                         <input id="data" name="Nasce_Pacientes" required class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'99/99/9999'" style="width: 23%" type="text" onblur="calcular('this.value');">
-                        <h6 class="red" id="resposta"></h6>
+                        <h6 class="red" id="resposta">Data Incorreta</h6>
                       </div>
                     </div>
                     <div class="form-group" id="Gen_Div">
@@ -77,7 +77,7 @@
                     <div class="form-group" id="Tel_Div">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12">Telefone para Contato<span class="required">*</span></label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input name="tel_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'(99) 9999-9999'" style="width: 30%" required="required" type="text">
+                        <input id="tel_Num" name="tel_Pacientes" class="date-picker form-control col-md-7 col-xs-12" data-inputmask="'mask':'(99) 9999-9999'" style="width: 30%" required="required" type="text">
                       </div>
                     </div>
                     <div class="form-group" id="Em_Div">

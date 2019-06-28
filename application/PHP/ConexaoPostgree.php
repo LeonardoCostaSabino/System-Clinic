@@ -120,7 +120,7 @@ $sql[] = "
     email_Usuario varchar(45) not null unique ,
     senha_Usuario varchar(25) not null unique
   );";
-
+  
   $sql[] = "
   insert into usuarios (nick_Usuario, nm_Usuario, email_Usuario, senha_Usuario) values ('BUTU', 'Leonardo Sabino', 'leonardo.sabino@unisuam.edu.br', '123456')
   ON CONFLICT (nick_Usuario) DO NOTHING;

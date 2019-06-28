@@ -1,5 +1,8 @@
 <?php
- include("Header.php");
+ include("../PHP/Configuraçoes.php");
+ $config = new Config();
+ $config->seguranca();
+  include("Header.php");
 ?>
         <!-- page content -->
         <div class="right_col" role="main">
@@ -148,7 +151,7 @@
                       <li><i class="fa fa-bar-chart"></i><a href="#">Exemplo 1</a> </li>
                       <li><i class="fa fa-line-chart"></i><a href="#">Exemplo 2</a>
                       </li>
-                      <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
+                      <li><i class="fa fa-area-chart"></i><a href="../PHP/Logout.php">Logout</a>
                       </li>
                     </ul>
 
