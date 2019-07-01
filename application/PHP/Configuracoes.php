@@ -5,7 +5,7 @@ class Config
 
   function __construct()
   {
-
+      define("Version", rand(1,80));
   }
 
   function url(){
@@ -25,6 +25,8 @@ class Config
     header("Location: ../../View/Login.php");
     exit;
     }
+
+
 
   }
 

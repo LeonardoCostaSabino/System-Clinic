@@ -22,12 +22,12 @@
 <script type="text/javascript" src="../JS/PaginaInicial.js"></script>
 
 <!-- Importando um arquivo css de algumas especificidades -->
-<link rel="stylesheet" href="../Css/Pagina_Inicial.css">
+<link rel="stylesheet" href="../Css/Agendamento_Consult.css">
 
 <script src="../JS/zabuto_calendar.js"></script>
 
 <!-- jQuery Smart Wizard -->
-<script src="../vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+
 <link rel="stylesheet" type="text/css" href="../Css/zabuto_calendar.css">
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -45,7 +45,7 @@
             <a class="nav-link" href="#home" >HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#login" data-toggle="modal" data-target="#login">LOGIN</a>
+            <a class="nav-link" href="Login.php">LOGIN</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#tbagendamento">AGENDAMENTO</a>
@@ -144,9 +144,9 @@
               <a id="volt1" href="#step-2">
                 <span class="step_no">1</span>
                 <span class="step_descr">
-                                  PASSO 1<br />
-                                  <small>Escolha de especialidade</small>
-                              </span>
+                  PASSO 1<br />
+                  <small>Escolha de especialidade</small>
+                </span>
               </a>
             </li>
             <li>
@@ -241,33 +241,6 @@
         </div>
         <!-- Botão para voltar ao inicio -->
     </footer>
-<div id="login" class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center">LOGIN</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="center modal-body">
-    <form action="../../PHP/Validar_Login.php" method="post" role="form">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="user" placeholder="Email" autocomplete="off" required>
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" class="form-control" id="password" name="senha" placeholder="Senha de Acesso" autocomplete="off" required>
-            </div>
-            <div class=" form-group">
-                <input type="checkbox" name="lembrar" class="form-check-label" id="exampleInputText" placeholder="Digite sua mensagem" />
-                <label>Lembrar de Mim</label>
-            </div>
-             <button type="submit" style="float: right" class="text-center btn btn-secondary">ENVIAR</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 <div hidden>
   <div class="col-md-4">
               <div id="medic1" class="card">

@@ -1,7 +1,4 @@
 <?php
- include("../PHP/Configuraçoes.php");
- $config = new Config();
- $config->seguranca();
   include("Header.php");
 ?>
         <!-- page content -->

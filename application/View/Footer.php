@@ -72,8 +72,9 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="../JS/Admin_System.js"></script>
-<script src="../JS/Formularios.js?Now()"></script>
-<script src="../JS/Logout.js?Now()"></script>
+
+<script src="../JS/Admin_System.js?v=<?php echo Version;?>"></script>
+<script src="../JS/Formularios.js?v=<?php echo Version;?>"></script>
+<script src="../JS/Logout.js?v=<?php echo Version;?>"></script>
   </body>
 </html>

@@ -1,3 +1,8 @@
+<?php
+include("../PHP/Configuracoes.php");
+$config = new Config();
+$config->seguranca();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
