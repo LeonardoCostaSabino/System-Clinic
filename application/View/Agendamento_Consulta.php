@@ -42,7 +42,7 @@
         </a>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" href="#home" >HOME</a>
+            <a class="nav-link" href="Pdf_Test.php" >HOME</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="Login.php">LOGIN</a>

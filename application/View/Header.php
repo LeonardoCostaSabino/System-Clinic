@@ -1,7 +1,7 @@
 <?php
-include("../PHP/Configuracoes.php");
-$config = new Config();
-$config->seguranca();
+include("../Model/Class:Configuracoes.php");
+$config = new Configuracoes();
+$config->verifica_Login();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,36 +15,36 @@ $config->seguranca();
     <title>System Clinic </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/nprogress/nprogress.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/select2/dist/css/select2.min.css" rel="stylesheet">
     <!-- Switchery -->
-    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- IChecker -->
-    <link href="../vendors/icheck-1.x/skins/square/red.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/icheck-1.x/skins/square/red.css" rel="stylesheet">
     <!-- rangeSlider -->
-    <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
-    <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
     <!-- fullcalendar -->
-    <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-    <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+    <link href="../Controller/JS/plugins_Jquery/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
     <!-- Dropzone.js -->
-    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="../Controller/JS/plugins_Jquery/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css">
 
 
     <!-- Custom Theme Style -->
-    <link href="../Css/Admin_System.css" rel="stylesheet">
+    <link href="Css/Admin_System.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -61,7 +61,7 @@ $config->seguranca();
     <!-- menu profile quick info -->
     <div class="profile clearfix">
       <div class="profile_pic">
-        <img src="../Imagens/Formulários/img.jpg" alt="..." class="img-circle profile_img">
+        <img src="Imagens/Formulários/img.jpg" alt="..." class="img-circle profile_img">
       </div>
       <div class="profile_info">
         <span>Bem vindo,</span>
@@ -134,7 +134,7 @@ $config->seguranca();
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" href="../PHP/Logout.php">
+      <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="<?php $config->Logout(); ?>">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
     </div>
@@ -152,13 +152,13 @@ $config->seguranca();
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="../Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
+            <img src="Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="">Perfil</a></li>
             <li><a onclick="HelpModal()" class="fa fa-info-circle" > Ajuda</a></li>
-            <li><a href="../PHP/Logout.php" class="fa fa-sign-out pull-right"></i> Sair</a></li>
+            <li><a href="../Model/Logout.php" class="fa fa-sign-out pull-right"></i> Sair</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown">
@@ -169,7 +169,7 @@ $config->seguranca();
           <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
             <li>
               <a>
-                <span class="image"><img src="../Imagens/Formulários/img.jpg" alt="Profile Image" /></span>
+                <span class="image"><img src="Imagens/Formulários/img.jpg" alt="Profile Image" /></span>
                 <span>
                   <span>Caro Usuário</span>
                   <span class="time">3 mins Atrás</span>

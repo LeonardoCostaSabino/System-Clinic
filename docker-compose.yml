@@ -35,3 +35,13 @@ services:
       volumes:
         - ./application:/application
         - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+
+    composer:
+        image: composer
+        container_name: new-system-composer
+        volumes:
+          - ./application
+        working_dir: /application
+        stdin_open: true
+        tty: true
+        command: composer init

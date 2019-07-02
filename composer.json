@@ -1,0 +1,6 @@
+{
+    "name": "root/application",
+    "require": {
+        "mpdf/mpdf": "^8.0"
+    }
+}
