@@ -16,11 +16,11 @@ class Configuracoes extends Banco_de_dados
   function Logout(){
     session_start();
     session_destroy();
-    header('Location: ../View/Login.php');
-    exit();
   }
 
   function Login(){
+
+    $banco = New Banco_de_dados;
 
     try {
 
@@ -36,7 +36,7 @@ class Configuracoes extends Banco_de_dados
       $senha = $_POST['senha'];
 
       // as próximas 3 linhas são responsáveis em se conectar com o bando de dados.
-      if (!verificar_Conexao()){
+      if (!$banco->verificar_Conexao()){
         die("Sem acesso ao DB, Entre em contato com o Administrador, leonardosabinoti@gmail.com");
       }
 
@@ -45,7 +45,7 @@ class Configuracoes extends Banco_de_dados
 
       $Select = "select * from usuarios where email_Usuario = '$login' and senha_Usuario = '$senha'";
 
-      $result = consulta($Select);
+      $result = $banco->consulta($Select);
 
       if($result->rowCount() < 1){
         throw new Exception("Login ou Senha inválido");
@@ -76,7 +76,6 @@ class Configuracoes extends Banco_de_dados
 
   function verifica_Login(){
     session_start();
-
     if(empty($_SESSION['dados_usuarios'])){
     header("Location: ../View/Login.php");
     exit;

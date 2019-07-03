@@ -6,13 +6,13 @@
   protected $user = "sabino";
   protected $password = "123456";
   protected $dbname = "system";
-  public $con;
+  public $connect;
 
   function __construct(){
     try
     {
       $opcoes = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-      $this->con = new PDO("pgsql:host={$this->host};port=5432;dbname={$this->dbname}",$this->user,$this->password,$opcoes);
+      $this->connect = new PDO("pgsql:host={$this->host};port=5432;dbname={$this->dbname}",$this->user,$this->password,$opcoes);
       $this->criar_Database();
     }
     catch (\Exception $e)
@@ -21,12 +21,12 @@
     }
   }
 
-  function fechar_Conexao(){
-    $this->con = null;
+  public function fechar_Conexao(){
+    $this->connect = null;
   }
 
-  function verificar_Conexao(){
-    if($this->con){
+  public function verificar_Conexao(){
+    if($this->connect){
       return true;
     }
     else{
@@ -34,8 +34,8 @@
     }
   }
 
-  function consulta($sql){
-    return query($sql);
+  public function consulta($sql){
+    return $this->connect->query($sql);
   }
 
   function criar_Database(){
@@ -132,7 +132,7 @@
 
         try{
           foreach ($sql as $s) {
-              $this->con->query($s);
+              $this->connect->query($s);
           }
         }catch(PDOException $e){
         echo $e->getMessage();

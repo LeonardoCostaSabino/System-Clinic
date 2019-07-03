@@ -10,13 +10,13 @@
     <title>System Medic Clinic </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../Css/Admin_System.css" rel="stylesheet">
@@ -34,13 +34,16 @@
             <form id="Login" method="post">
               <h1>System Login</h1>
               <div>
-                <input type="text" id="user" name="user" class="form-control" placeholder="CPF" required="" />
+                <input type="text" id="user" name="user" class="form-control" placeholder="CPF ou Email"/>
               </div>
               <div>
-                <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" required="" />
+                <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha"/>
+                <div hidden>
+                <input type="password" value="Login" name="action"/>
+                </div>
               </div>
               <div>
-                <button type="button" class="btn btn-success" id="logar">Entrar</button>
+                <button type="button" class="btn btn-success"  id="logar">Entrar</button>
               </div>
 
               <div class="clearfix"></div>
@@ -58,6 +61,6 @@
       </div>
     </div>
   </body>
-  <script src="../vendors/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../JS/Login.js"></script>
+  <script src="../Javascript_and_plugins/plugins_Jquery/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../Javascript_and_plugins/Login.js"></script>
 </html>

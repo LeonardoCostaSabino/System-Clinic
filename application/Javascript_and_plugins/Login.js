@@ -1,8 +1,9 @@
+
 $(document).ready(function(){
   $("#MensagemErro").hide();
   $("#logar").click(function(){
     $.ajax({
-      url: "../../PHP/Validar_Login.php",
+      url: "../Controller/Action_Redirecionar.php",
       method: "post",
       data: $("#Login").serializeArray(),
       dataType:'json',

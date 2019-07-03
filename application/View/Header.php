@@ -15,36 +15,36 @@ $config->verifica_Login();
     <title>System Clinic </title>
 
     <!-- Bootstrap -->
-    <link href="../Controller/JS/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../Controller/JS/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../Controller/JS/plugins_Jquery/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/nprogress/nprogress.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="../Controller/JS/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../Controller/JS/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="../Controller/JS/plugins_Jquery/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="../Controller/JS/plugins_Jquery/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/select2/dist/css/select2.min.css" rel="stylesheet">
     <!-- Switchery -->
-    <link href="../Controller/JS/plugins_Jquery/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- IChecker -->
-    <link href="../Controller/JS/plugins_Jquery/icheck-1.x/skins/square/red.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/icheck-1.x/skins/square/red.css" rel="stylesheet">
     <!-- rangeSlider -->
-    <link href="../Controller/JS/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
-    <link href="../Controller/JS/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/ion.rangeSlider/css/ion.rangeSlider.skinNice.css" rel="stylesheet">
     <!-- fullcalendar -->
-    <link href="../Controller/JS/plugins_Jquery/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-    <link href="../Controller/JS/plugins_Jquery/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+    <link href="../Javascript_and_plugins/plugins_Jquery/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
     <!-- Dropzone.js -->
-    <link href="../Controller/JS/plugins_Jquery/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+    <link href="../Javascript_and_plugins/plugins_Jquery/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css">
 
 
     <!-- Custom Theme Style -->
-    <link href="Css/Admin_System.css" rel="stylesheet">
+    <link href="../Css/Admin_System.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -96,8 +96,8 @@ $config->verifica_Login();
           </li>
           <li><a><i class="fa fa-file-text-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a>Relatório.PDF</a></li>
-              <li><a>Relatório.PDF</a></li>
+              <li><a href="Pdf_Test.php">Relatório.PDF</a></li>
+              <li><a href="Pdf_Test0.php">Relatório.PDF</a></li>
             </ul>
           </li>
           <li><a><i class="fa fa-globe"></i> Funções Adicionais <span class="fa fa-chevron-down"></span></a>
@@ -134,7 +134,7 @@ $config->verifica_Login();
       <a data-toggle="tooltip" data-placement="top" title="Lock">
         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
       </a>
-      <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="<?php $config->Logout(); ?>">
+      <a data-toggle="tooltip" data-placement="top" title="Logout" id="Logout_Bar">
         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
       </a>
     </div>
@@ -152,13 +152,13 @@ $config->verifica_Login();
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
+            <img id="Tela_nome" src="Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="">Perfil</a></li>
             <li><a onclick="HelpModal()" class="fa fa-info-circle" > Ajuda</a></li>
-            <li><a href="../Model/Logout.php" class="fa fa-sign-out pull-right"></i> Sair</a></li>
+            <li><a id="Logout_sair" class="fa fa-sign-out pull-right"></i> Sair</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown">
