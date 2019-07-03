@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("#MensagemErro").hide();
   $("#logar").click(function(){
     $.ajax({
-      url: "../Controller/Action_Redirecionar.php",
+      url: "../Controller/Action_Rotas.php",
       method: "post",
       data: $("#Login").serializeArray(),
       dataType:'json',
@@ -11,7 +11,7 @@ $(document).ready(function(){
       {
         if(result.success)
         {
-          location.href='../../View/System_Administer.php'
+          location.href='../../View/Pagina_Init.html'
         }
         else
         {
