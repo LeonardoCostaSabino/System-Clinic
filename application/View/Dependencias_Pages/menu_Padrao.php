@@ -24,10 +24,10 @@
   <link href="../Javascript_and_plugins/plugins_Jquery/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
   <!-- Dropzone.js -->
   <link href="../Javascript_and_plugins/plugins_Jquery/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
-  
+
   <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/theme-default.min.css">
   <!-- Custom Theme Style -->
-  <link href="../Css/Admin_System.css" rel="stylesheet">
+  <link href="../../Css/Admin_System.css" rel="stylesheet">
 </head>
 <body class="nav-md">
   <div class="container body">
@@ -43,7 +43,7 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="Imagens/Formulários/img.jpg" alt="..." class="img-circle profile_img">
+              <img src="../Imagens/Formulários/img.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Bem vindo,</span>
@@ -58,34 +58,37 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li>
-                  <a href="System_Administer.php"><i class="fa fa-home"></i> Home</a>
+                <li id="Home_link">
+                  <a><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li>
                   <a><i class="fa fa-edit"></i> Nome <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li>
-                      <a href="Paciente.php"><i class="fa fa-child" aria-hidden="true"></i>Pacientes</a>
+                    <li id="Paciente_link" >
+                      <a><i class="fa fa-child" aria-hidden="true"></i>Pacientes</a>
                     </li>
+                      <li>
                       <a><i class="fa fa-book"></i>Consultas</a>
                       <ul class="nav child_menu">
-                        <li>
-                          <a href="Agendamento_Consulta.php"><i class="fa fa-calendar-check-o"></i>Agendamento de consultas</a>
+                        <li id="Agendamento_link">
+                          <a><i class="fa fa-calendar-check-o"></i>Agendamento de consultas</a>
                         </li>
-                        <li>
-                          <a href="Agendamento_Calendar.php"><i class="fa fa-calendar"></i>Visualizar consultas</a>
+                        <li id="Visualizar_link">
+                          <a><i class="fa fa-calendar"></i>Visualizar consultas</a>
+                        </li>
                         </li>
                       </ul>
-                        <li><a href="Funcionario.php"><i class="fa fa-user"></i>Funcionários</a></li>
-                        <li><a href="Prontuario.php"><i class="fa fa-file-o"></i>Prontuário</a></li>
-                        <li><a href="Clinicas.php"><i class="fa fa-hospital-o"></i>Clinicas</a></li>
-                        <li><a href="Dicom.php"><i class="fa fa-camera-retro"></i>Dicom</a></li>
+                    </li>
+                        <li id="Funcionario_link" ><a><i class="fa fa-user"></i>Funcionários</a></li>
+                        <li id="Prontuario_link" ><a><i class="fa fa-file-o"></i>Prontuário</a></li>
+                        <li id="Clinicas_link" ><a><i class="fa fa-hospital-o"></i>Clinicas</a></li>
+                        <li id="Dicom_link"><a><i class="fa fa-camera-retro"></i>Dicom</a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-file-text-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="Pdf_Test.php">Relatório.PDF</a></li>
-                    <li><a href="Pdf_Test0.php">Relatório.PDF</a></li>
+                    <li id="Pdf1_link"><a href="Pdf_Test.php">Relatório.PDF</a></li>
+                    <li id="Pdf2_link"><a href="Pdf_Test0.php">Relatório.PDF</a></li>
                   </ul>
                 </li>
                 <li>
@@ -108,14 +111,14 @@
                   <li>
                     <a>
                       <i class="fa fa-bug">
-                      </i> Genrenciamento
+                      </i> Gerenciamento
                       <span class="fa fa-chevron-down">
                       </span>
                     </a>
                     <ul class="nav child_menu">
-                      <li><a href="Consult_Dados.php">Pagina de Agendamento</a></li>
-                      <li><a href="Admin_Permissao.php">Modificação de Permissões</a></li>
-                      <li><a href="Biográfia.html">Sobre nós</a></li>
+                      <li><a>Pagina de Agendamento</a></li>
+                      <li><a>Modificação de Permissões</a></li>
+                      <li><a>Sobre nós</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -154,13 +157,13 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img id="Tela_nome" src="Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
+                    <img id="Tela_nome" src="../Imagens/Formulários/img.jpg" alt=""> Vai ser Ajax
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="">Perfil</a></li>
                     <li><a onclick="HelpModal()" class="fa fa-info-circle" > Ajuda</a></li>
-                    <li><a id="Logout_sair" class="fa fa-sign-out pull-right"></i> Sair</a></li>
+                    <li><a href="../Controller/Action_Rotas.php?action=Logout" class="fa fa-sign-out pull-right"></i> Sair</a></li>
                   </ul>
                 </li>
                 <li role="presentation" class="dropdown"></li>

@@ -1,8 +1,4 @@
-<?php
-include("../Model/Class:Configuracoes.php");
-$config = new Configuracoes();
-$config->verifica_Login();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

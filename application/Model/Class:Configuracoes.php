@@ -13,9 +13,16 @@ class Configuracoes extends Banco_de_dados
     return $_SERVER['SERVER_PROTOCOL'].$_SERVER['SERVER_NAME'];
   }
 
+  function redirecionar($variavel){
+    header('location:carregador.php?para='.$variavel);
+  }
+
   function Logout(){
+
     session_start();
     session_destroy();
+    header('Location:../Controller/Action_Rotas.php?action=Login');
+    exit;
   }
 
   function Login(){
@@ -77,7 +84,7 @@ class Configuracoes extends Banco_de_dados
   function verifica_Login(){
     session_start();
     if(empty($_SESSION['dados_usuarios'])){
-    header("Location: ../View/Login.php");
+    header("Location: ../Controller/Action_Rotas.php?action=Login");
     exit;
     }
   }
