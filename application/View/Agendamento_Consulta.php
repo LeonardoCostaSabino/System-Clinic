@@ -19,12 +19,12 @@
 <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 
 <!-- Importando biblioteca de funcões usadas no site -->
-<script type="text/javascript" src="../JS/PaginaInicial.js"></script>
+<script type="text/javascript" src="../Javascript_and_plugins/PaginaInicial.js?14"></script>
 
 <!-- Importando um arquivo css de algumas especificidades -->
-<link rel="stylesheet" href="../Css/Agendamento_Consult.css">
+<link rel="stylesheet" href="../Css/Agendamento_Consult.css?13">
 
-<script src="../JS/zabuto_calendar.js"></script>
+<script src="../Javascript_and_plugins/zabuto_calendar.js"></script>
 
 <!-- jQuery Smart Wizard -->
 
@@ -38,14 +38,14 @@
 
     <nav class="adq navbar nav navbar-dark navbar-expand-lg navbar-inverse" style="font-size: 1.25rem" >
         <a class="e" href="#">
-            <img src="../Imagens/PaginaInicial/_medical_icon_1113399.png" width="45" height="45" alt="">
+            <img src="../Imagens/Pagina_inicial/_medical_icon_1113399.png" width="45" height="45" alt="">
         </a>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link" href="Pdf_Test.php" >HOME</a>
+            <a class="nav-link" href="../Controller/Rotas.php?rota=Home" >HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Login.php">LOGIN</a>
+            <a class="nav-link" href="../Controller/Rotas.php?rota=Login">LOGIN</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#tbagendamento">AGENDAMENTO</a>
@@ -76,35 +76,35 @@
         <div class="container-fluid text-center">
             <div class="row">
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/psicologia1.png" class="rounded-circle" id="PSI" /> <h1 >Psicologia</h1>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/psicologia1.png" class="rounded-circle" id="PSI" /> <h1 >Psicologia</h1>
                 </div>
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/ortopedia1.png" class="rounded-circle" id="ORT" /> <h1>Ortopedia</h1>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/ortopedia1.png" class="rounded-circle" id="ORT" /> <h1>Ortopedia</h1>
                 </div>
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/clinica_geral1.png" class="rounded-circle" id="CLI" /> <h1>Clinico Geral</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/psiquiatria1.png" class="rounded-circle" id="PSQ" /> <h1>Psiquiatria</h1>
-                </div>
-                <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/ginecologista1.png" class="rounded-circle" id="GIN" /> <h1>Ginecologista</h1>
-                </div>
-                <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/fisioterapia1.png" class="rounded-circle" id="FIS" /> <h1>Fisioterapia</h1>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/clinica_geral1.png" class="rounded-circle" id="CLI" /> <h1>Clinico Geral</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/neurologia1.png" class="rounded-circle" id="NEU" /> <h1>Neurologia</h1></td>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/psiquiatria1.png" class="rounded-circle" id="PSQ" /> <h1>Psiquiatria</h1>
                 </div>
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/fonoaudiologia1.png" class="rounded-circle" id="FON" /> <h1>Fonoaudilogia</h1>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/ginecologista1.png" class="rounded-circle" id="GIN" /> <h1>Ginecologista</h1>
                 </div>
                 <div class="col-md-4">
-                    <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/dermatologia1.png" class="rounded-circle" id="DER" /> <h1>Dermatologia</h1>
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/fisioterapia1.png" class="rounded-circle" id="FIS" /> <h1>Fisioterapia</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/neurologia1.png" class="rounded-circle" id="NEU" /> <h1>Neurologia</h1></td>
+                </div>
+                <div class="col-md-4">
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/fonoaudiologia1.png" class="rounded-circle" id="FON" /> <h1>Fonoaudilogia</h1>
+                </div>
+                <div class="col-md-4">
+                    <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/dermatologia1.png" class="rounded-circle" id="DER" /> <h1>Dermatologia</h1>
                 </div>
             </div>
         </div>
@@ -196,7 +196,7 @@
                 <br>
                 <div class="row">
                     <div class="col-md-6">
-                        <img alt="Bootstrap Image Preview" src="../Imagens/PaginaInicial/Atende.png" class="rounded-circle" style="float: right; width: 45%" />
+                        <img alt="Bootstrap Image Preview" src="../Imagens/Pagina_inicial/Atende.png" class="rounded-circle" style="float: right; width: 45%" />
                     </div>
                     <div class="col-md-6">
                         <address>
@@ -246,7 +246,7 @@
               <div id="medic1" class="card">
                 <div class="card-horizontal">
                     <div class="text-center img-square-wrapper">
-                        <img  class="" src="../Imagens/PaginaInicial/_medical_icon_1113399.png" style="width:110%;" alt="Card image cap">
+                        <img  class="" src="../Imagens/Pagina_inicial/_medical_icon_1113399.png" style="width:110%;" alt="Card image cap">
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">Doutor Astrogildo</h4>
@@ -259,7 +259,7 @@
                 <div class="card">
                   <div  class="card-horizontal ">
                       <div class="text-center img-square-wrapper">
-                          <img id="medic2" class="text-center" src="../Imagens/PaginaInicial/_medical_icon_1113399.png" style="width:110%; cursor: pointer" alt="Card image cap">
+                          <img id="medic2" class="text-center" src="../Imagens/Pagina_inicial/_medical_icon_1113399.png" style="width:110%; cursor: pointer" alt="Card image cap">
                       </div>
                       <div class="card-body">
                           <h4 class="card-title">Doutor Astrogildo</h4>
@@ -272,7 +272,7 @@
               <div class="card">
                   <div  class="card-horizontal">
                       <div class="text-center img-square-wrapper">
-                          <img id="medic3" class="" src="../Imagens/PaginaInicial/_medical_icon_1113399.png" style="width:110%; pointer " alt="Card image cap">
+                          <img id="medic3" class="" src="../Imagens/Pagina_inicial/_medical_icon_1113399.png" style="width:110%; pointer " alt="Card image cap">
                       </div>
                       <div class="card-body">
                           <h4 class="card-title">Doutor Astrogildo</h4>

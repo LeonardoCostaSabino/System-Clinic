@@ -65,7 +65,7 @@ body, html
 /* Primeira imagem da clinica */
 .bgimg-1
     {
-        background-image: url('../Imagens/PaginaInicial/Clinica2.jpg');
+        background-image: url("../Imagens/Pagina_inicial/Clinica2.jpg");
         min-height: 100%;
         opacity:0.75;
         display:block;
@@ -75,7 +75,7 @@ body, html
 /* Segunda Imagem do contato da clinica */
 .bgimg-3
     {
-        background-image: url("../Imagens/PaginaInicial/Clinica.jpg");
+        background-image: url("../Imagens/Pagina_inicial/Clinica.jpg");
         min-height: 50%;
         opacity:0.75;
         display:block;

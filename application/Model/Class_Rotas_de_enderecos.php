@@ -6,6 +6,10 @@ Class Rotas {
 
   }
 
+  function rota_agendamento_con(){
+    include ('../View/Agendamento_Consulta.php');
+  }
+
   function rota_home(){
     include ('../View/Dependencias_Pages/title_Padrao.php');
     include ('../View/Dependencias_Pages/menu_Padrao.php');
@@ -19,7 +23,6 @@ Class Rotas {
     include ('../View/Dependencias_Pages/menu_Padrao.php');
     include ('../View/Paciente.html');
     include ('../View/Dependencias_Pages/rodape_Padrao.php');
-
   }
 
   function rota_Funcionario(){
@@ -69,7 +72,7 @@ Class Rotas {
     include ('../View/Dependencias_Pages/title_Padrao.php');
     include ('../View/Dependencias_Pages/depedencias_Agendamento.php');
     include ('../View/Dependencias_Pages/menu_Padrao.php');
-    include ('../View/Agedamento_Calendar.html');
+    include ('../View/Agendamento_Calendar.html');
     include ('../View/Dependencias_Pages/rodape_Padrao.php');
   }
 
@@ -82,6 +85,14 @@ Class Rotas {
   }
 
   function rota_login(){
-    include('../View/Login.html');
+    include('../View/Login_Melhorado.html');
+  }
+
+  function rota_pdf1(){
+    include('../View/Pdf_Test.php');
+  }
+
+  function rota_pdf2(){
+    include('../View/Pdf_Test0.php');
   }
 }

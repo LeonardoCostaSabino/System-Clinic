@@ -10,18 +10,14 @@ class Configuracoes extends Banco_de_dados
   }
 
   function url(){
-    return $_SERVER['SERVER_PROTOCOL'].$_SERVER['SERVER_NAME'];
-  }
-
-  function redirecionar($variavel){
-    header('location:carregador.php?para='.$variavel);
+    return "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
   }
 
   function Logout(){
 
     session_start();
     session_destroy();
-    header('Location:../Controller/Action_Rotas.php?action=Login');
+    header('Location:../Controller/Rotas.php?rota=Login');
     exit;
   }
 
@@ -29,14 +25,20 @@ class Configuracoes extends Banco_de_dados
 
     $banco = New Banco_de_dados;
 
-    try {
-
       if(empty($_POST['user'])){
-        throw new Exception("Por favor preencha o campo do Usuário");
+        echo json_encode([
+        'success'=> false,
+        'message'=> "Por favor preencha o campo do Usuário"
+      ]);
+      exit;
       }
 
       if(empty($_POST['senha'])){
-        throw new Exception("Por favor preencha o campo da Senha");
+        echo json_encode([
+        'success'=> false,
+        'message'=> "Por favor preencha o campo da Senha"
+      ]);
+      exit;
       }
       // as variáveis login e senha recebem os dados digitados na página anterior
       $login = $_POST['user'];
@@ -55,36 +57,28 @@ class Configuracoes extends Banco_de_dados
       $result = $banco->consulta($Select);
 
       if($result->rowCount() < 1){
-        throw new Exception("Login ou Senha inválido");
+        echo json_encode([
+        'success'=> false,
+        'message'=> "Login ou Senha inválido"
+      ]);
+      exit;
       }
-
-      // session_start inicia a sessão
       session_start();
-      // session_destroy();
       $dados_usuario = $result->fetch(PDO::FETCH_ASSOC);
       unset($dados_usuario['senha_usuario']);
+
       $_SESSION['dados_usuarios'] = $dados_usuario;
       echo json_encode([
         'success'=>true,
         'message'=> "Logado com sucesso!",
       ]);
 
-
-      }
-    catch (\Exception $e)
-      {
-        echo json_encode([
-        'success'=>false,
-        'message'=>$e->getMessage()
-      ]);
-    }
-
   }
 
   function verifica_Login(){
     session_start();
     if(empty($_SESSION['dados_usuarios'])){
-    header("Location: ../Controller/Action_Rotas.php?action=Login");
+    header("Location: ../Controller/Rotas.php?rota=Login");
     exit;
     }
   }

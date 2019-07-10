@@ -2,18 +2,17 @@ $(document).ready(function(){
   $("#MensagemErro").hide();
   $("#logar").click(function(){
     let params = $("#Login").serialize();
-     params.action = "Login";
+    // params.rota = 'Login';
     $.ajax({
-      url: "../Controller/Action_Rotas.php",
+      url: "../Controller/Rotas.php",
       method: "post",
-      data:params ,
+      data: params ,
       dataType:'json',
       success: function(result)
       {
-        console.log('OI')
         if(result.success)
         {
-          location.href = '../Controller/Action_Rotas.php?action=Home'
+          location.href = '../Controller/Rotas.php?rota=Home'
         }
         else
         {

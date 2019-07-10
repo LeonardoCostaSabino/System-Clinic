@@ -1,17 +1,17 @@
 var Name = $("#Tela_nome").text();
 
-var params = {action:'Logout'};
+var params = {rota:'Logout'};
 
 $("#Logout_Bar").click(function(){
 
   $.ajax({
-      url: "../Controller/Action_Rotas.php",
+      url: "../Controller/Rotas.php",
       method: "POST",
       data: params,
       dataType: "json",
       success: function(result){
         if(result.success){
-          location.href = '../View/Login.html'
+          location.href = '../Controller/Rotas.php?rota=Login'
         }
       }
   })

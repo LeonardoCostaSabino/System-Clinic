@@ -1,41 +1,24 @@
 <?php
 require("../Model/Class_Rotas_de_enderecos.php");
 
-
-
-
-try {
+$rotas = New Rotas;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-  $parametros=$_POST['action'];
+  $parametros=$_POST['rota'];
 
-  switch ($parametros){
-
-    case "Login":
-      include("../Model/Class:Configuracoes.php");
-      $config = New Configuracoes();
-      $config->Login();
-      break;
-    default:
-      $config->redirecionar($parametros);
-      break;
-    }
+  if ($parametros == "Login"){
+    include("../Model/Class:Configuracoes.php");
+    $config = New Configuracoes();
+    $config->Login();
+  }
+  else{
+    $rotas->rota_login();
   }
 }
-catch (\Exception $e) {
-echo json_encode([
-'success'=>false,
-'message'=>$e->getMessage()
-]);
-}
-
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-  $parametros=!empty($_GET['action']) ? $_GET['action'] : "" ;
-
-
-  $rotas = New Rotas;
+  $parametros=!empty($_GET['rota']) ? $_GET['rota'] : "" ;
 
   switch($parametros){
   case "Login":
@@ -47,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
   $config->Logout();
     break;
   case "Home":
+
    include("../Model/Class:Configuracoes.php");
     $config = New Configuracoes();
     $config->verifica_Login();
@@ -79,8 +63,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
   case "Permisssao":
     $rotas->rota_Permissao();
     break;
-    default:
-        $rotas->rota_login();
+  case "pdf1":
+    $rotas->rota_pdf1();
+    break;
+  case "pdf2":
+    $rotas->rota_pdf2();
+    break;
+  case "Agendamento_con":
+    $rotas->rota_agendamento_con();
+    break;
+  default:
+    $rotas->rota_login();
     break;
   }
 

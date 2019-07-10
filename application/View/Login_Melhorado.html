@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link href="../Css/Login.css" rel="stylesheet">
+</head>
+
+<body class="login-page sidebar-collapse">
+  <div class="page-header clear-filter" filter-color="blue">
+    <div class="page-header-image" style="background-image:url('../Imagens/gettyimages-619636894-612x612.jpg')"></div>
+    <div class="content">
+      <div class="container">
+        <div class="col-md-4 ml-auto mr-auto">
+          <div class="card card-login card-plain">
+            <h2 id="MensagemErro">Usuário ou senha errados!</h2>
+            <form class="form" id="Login" method="post">
+              <div class="card-header text-center">
+                <div class="logo-container">
+                  <img src="https://raw.githack.com/creativetimofficial/now-ui-kit/master/assets/img/now-logo.png" alt="">
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons users_circle-08"></i>
+                    </span>
+                  </div>
+                  <input type="text" id="user" name="user" class="form-control" placeholder="Email ou CPF...">
+                </div>
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="now-ui-icons text_caps-small"></i>
+                    </span>
+                  </div>
+                  <input type="password" id="senha" name="senha" placeholder="Senha..." class="form-control" />
+                </div>
+              </div>
+              <div hidden>
+              <input type="password" value="Login" name="rota"/>
+              </div>
+              <div class="card-footer text-center">
+                <a id="logar" class="btn btn-primary btn-round btn-lg btn-block">Login</a>
+                <div class="pull-left">
+                  <h6>
+                    <a href="#Modal" class="link">Create Account</a>
+                  </h6>
+                </div>
+                <div class="pull-right">
+                  <h6>
+                    <a href="#Modal" class="link">Need Help?</a>
+                  </h6>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="">
+                New System Clinic
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Sobre Nos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="../Javascript_and_plugins/Login.js"></script>
+
+</body>
+</html>

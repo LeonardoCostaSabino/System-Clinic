@@ -1,15 +1,3 @@
-// Mostrar o menu em pequenas telas (Precisa Alterar)
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1)
-    {
-        x.className += " w3-show";
-    } else
-    {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
 //Para de mostrar o Div (Agenda)
 $(document).ready(function(){
     $("#agenda1").hide();
@@ -42,7 +30,7 @@ function myDateFunction(id) {
         {
         language: "pt",
         ajax: {
-            url: "Carregar.json",
+            url: "../Controller/Carregar.json?132",
             modal: false
         },
         action: function() {myDateFunction(this.id)},
