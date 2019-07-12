@@ -1,8 +1,12 @@
 <?php
 
+
+
 require("../Model/Rotas_de_enderecos.php");
 
 $rotas = New Rotas;
+
+//
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -17,21 +21,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+
   $parametros=!empty($_GET['rota']) ? $_GET['rota'] : "" ;
+
+  if ($parametros == "Login"){
+    $rotas->rota_login();
+  }
+  else{
+    $rotas->verifica_Login();
+  }
 
   switch($parametros){
   case "Login":
-    $rotas->rota_login();
     break;
   case "Logout":
     $rotas->Logout();
     break;
   case "Home":
-    $rotas->verifica_Login();
+    // $rotas->verifica_Login();
     $rotas->rota_home();
     break;
   case "Paciente":
-    $rotas->verifica_Login();
     $rotas->rota_Paciente();
     break;
   case "Funcionario":
@@ -65,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     $rotas->rota_agendamento_con();
     break;
   default:
-    $rotas->rota_login();
+    $rotas->rota_404();
     break;
   }
 }

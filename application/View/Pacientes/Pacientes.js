@@ -1,3 +1,10 @@
+
+var Type_Cad;
+var Senha;
+var RegexDate = /^\s*(3[01]|[12][0-9]|0?[1-9])\/(1[012]|0?[1-9])\/((?:19|20)\d{2})\s*$/;
+var testPeso = /^(4[0-9]|[5-9][0-9]|[0-2]{1}[0-9][0-9]|[1-2][0-9][0-9])$/;
+var testAltura = /^[0-2],\d{2}$/;
+
 //Submit (formulário de Pacientes)
 $("#cadastrarPaciente").click(function(){
 
@@ -99,3 +106,44 @@ $("#Cad_CP").click(function()
         });
     };
 });
+
+function Mensagem_Erro_Date(data)
+{
+  var OK = RegexDate.exec(data.value);
+  if (!OK)
+  {
+    $(resposta).html("");
+    $(resposta).append("Data Incorreta");
+  }
+}
+
+//Calcula o Campo Idade do Formulário de cadastro da pessoa (formulário de Pacientes)
+function calculateAge(dobString)
+{
+  var dob = new Date(dobString);
+  var currentDate = new Date();
+  var currentYear = currentDate.getFullYear();
+  var birthdayThisYear = new Date(dob.getDate(), dob.getMonth(),currentYear);
+  var age = currentYear - dob.getFullYear();
+  if(birthdayThisYear > currentDate)
+  {
+    age--;
+  }
+  return age;
+  }
+
+//Verifica os Dados do formulário para calcular a idade (formulário de Pacientes)
+function calcular(data)
+{
+  var data = document.frm.data.value;
+  var partes = data.split("/");
+  var junta = partes[2]+"-"+partes[1]+"-"+partes[0];
+  document.frm.idade.value = (calculateAge(junta));
+}
+
+$(document).ready(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal_red',
+    radioClass: 'iradio_minimal',
+    increaseArea: '20%' // optional
+  });

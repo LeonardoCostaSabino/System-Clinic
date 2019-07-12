@@ -5,13 +5,13 @@ var params = {rota:'Logout'};
 $("#Logout_Bar").click(function(){
 
   $.ajax({
-      url: "../Controller/Rotas.php",
+      url: "../index.php",
       method: "POST",
       data: params,
       dataType: "json",
       success: function(result){
         if(result.success){
-          location.href = '../Controller/Rotas.php?rota=Login'
+          location.href = '../?rota=Login'
         }
       }
   })

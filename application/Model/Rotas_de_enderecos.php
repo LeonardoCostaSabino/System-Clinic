@@ -17,30 +17,36 @@ Class Rotas extends Configuracoes {
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/System_Administer.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/Depend_home.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_Paciente(){
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/title_Padrao.php');
-        include ($_SERVER["DOCUMENT_ROOT"].'/Pacientes/depedencias_Pacientes.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Pacientes/Header_Pac.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Pacientes/Paciente.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Pacientes/depedencias_Pacientes.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_Funcionario(){
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/title_Padrao.php');
-        include ($_SERVER["DOCUMENT_ROOT"].'/Funcionarios/depedencias_Funcionarios.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Funcionarios/Funcionario.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Funcionarios/depedencias_Funcionarios.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_consult(){
-        include ($_SERVER["DOCUMENT_ROOT"].'Home/title_Padrao.php');
-        include ($_SERVER["DOCUMENT_ROOT"].'Consultas/Consulta_con/depedencias_Consult.php');
-        include ($_SERVER["DOCUMENT_ROOT"].'Home/menu_Padrao.php');
-        include ($_SERVER["DOCUMENT_ROOT"].'Consultas/Consulta_con/Consult_Dados.html');
-        include ($_SERVER["DOCUMENT_ROOT"].'Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/title_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_con/depedencias_Consult.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_con/Consult_Dados.html');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_Prontuario(){
@@ -49,6 +55,7 @@ Class Rotas extends Configuracoes {
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Prontuario/Prontuario.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
     function rota_Permissao(){
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/title_Padrao.php');
@@ -56,6 +63,7 @@ Class Rotas extends Configuracoes {
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Permisssao/Paciente.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_Dicom(){
@@ -64,12 +72,14 @@ Class Rotas extends Configuracoes {
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Dicom/Upload_Dicom.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_agendamento(){
-        include($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Header_agenda.php');
-        include($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Consult_agenda.html');
-        include($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Footer_agenda.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Header_agenda.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Consult_agenda.html');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Consultas/Consulta_agenda/Footer_agenda.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_clinicas(){
@@ -78,6 +88,7 @@ Class Rotas extends Configuracoes {
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/menu_Padrao.php');
         include ($_SERVER["DOCUMENT_ROOT"].'/Clinicas/Consult_Dados.html');
         include ($_SERVER["DOCUMENT_ROOT"].'/Home/rodape_Padrao.php');
+        include ($_SERVER["DOCUMENT_ROOT"].'/Home/htmlfinal.php');
     }
 
     function rota_login(){
@@ -92,5 +103,9 @@ Class Rotas extends Configuracoes {
 
     function rota_pdf2(){
         include($_SERVER["DOCUMENT_ROOT"].'/Relatorios/Pdf_Test0.php');
+    }
+
+    function rota_404(){
+        include($_SERVER["DOCUMENT_ROOT"].'/Public/Not_found.html');
     }
 }
