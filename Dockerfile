@@ -1,15 +1,29 @@
-FROM node:10.15.0-alpine
-EXPOSE 3000 9229
 
-WORKDIR /home/app
+# Setup and build the client
 
-COPY package.json /home/app/
-COPY package-lock.json /home/app/
+FROM node:9.4.0-alpine as client
 
-RUN npm ci
-
-COPY . /home/app
-
+WORKDIR /usr/app/client/
+COPY client/package*.json ./
+RUN npm install -qy
+COPY client/ ./
 RUN npm run build
 
-CMD ./scripts/start.sh
+
+# Setup the server
+
+FROM node:9.4.0-alpine
+
+WORKDIR /usr/app/
+COPY --from=client /usr/app/client/build/ ./client/build/
+
+WORKDIR /usr/app/server/
+COPY server/package*.json ./
+RUN npm install -qy
+COPY server/ ./
+
+ENV PORT 8000
+
+EXPOSE 8000
+
+CMD ["npm", "start"]

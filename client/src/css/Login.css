@@ -13,6 +13,10 @@
     color: #FFFFFF;
 }
 
+.imgLogin {
+    background-image:url('../images/gettyimages-619636894-612x612.jpg');
+}
+
 .btn:hover,
 .btn:focus,
 .btn:not(:disabled):not(.disabled):active,
@@ -416,13 +420,6 @@ body {
     float: right;
 }
 
-@font-face {
-    font-family: 'Nucleo Outline';
-  src: url("../fonts/nucleo-outline.eot");
-  src: url("../fonts/nucleo-outline.eot") format("embedded-opentype"), url("../fonts/nucleo-outline.woff2") format("woff2"), url("../fonts/nucleo-outline.woff") format("woff"), url("../fonts/nucleo-outline.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 .now-ui-icons {
     display: inline-block;

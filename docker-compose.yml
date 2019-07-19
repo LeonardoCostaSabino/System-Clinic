@@ -1,25 +1,26 @@
-# docker-compose.yml
-version: "3"
+version: '2'
 services:
-  app:
-    build: .
-    container_name: New-System-Node
+  server:
+    build:
+      context: ./server/
+    command: /usr/app/node_modules/.bin/nodemon src/index.js
     volumes:
-      - .:/home/app/
-      - /home/app/node_modules
-      - /home/app/node_js
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8080:8080"
+    # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+  client:
+    build:
+      context: ./client/
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
     depends_on:
-      - postgres
+      - server
     ports:
       - "3000:3000"
-      - "9229:9229"
-
-  postgres:
-    image: postgres:11.2-alpine
-    container_name: New-System-Postgres
-    environment:
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_DB: db
-    ports:
-      -  "5432:5432"
