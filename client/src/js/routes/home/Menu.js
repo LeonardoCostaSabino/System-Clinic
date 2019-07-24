@@ -2,9 +2,7 @@ import React from 'react'
 import { GroupMenuItem, MenuItem } from '../../components/SideBar'
 
 const Menu = (
-  <GroupMenuItem title="Home" icon="home" to="/home">
-    <MenuItem title="Dashboard 1" to="/home/dashboard-1" />
-  </GroupMenuItem>
+    <MenuItem title="Home" icon="home" to="/home" />
 )
 
 export default Menu

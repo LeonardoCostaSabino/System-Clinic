@@ -4,12 +4,12 @@ import cn from 'classnames'
 
 class MenuItem extends Component {
   render () {
-    const { title, isActive, ...rest } = this.props
+    const { icon, title, isActive, ...rest } = this.props
     const { to } = rest
     const currentPage = isActive(to)
 
     return (
-      <li className={cn({'current-page': currentPage})}><Link {...rest}>{title}</Link></li>
+      <li className={cn({'current-page': currentPage})}><Link {...rest}><i className={ `fa fa-${icon}` }></i>{title}</Link></li>
     )
   }
 }

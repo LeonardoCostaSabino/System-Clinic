@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Home from './home'
-import Forms from './forms';
+import Forms from './gerenciamento';
 import Extras from './extras'
 
 class PageContent extends Component {

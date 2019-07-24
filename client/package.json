@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mapbox/mr-ui": "^0.7.2",
     "classnames": "^2.2.5",
+    "emitter-js": "^2.0.2",
     "node-sass-chokidar": "^0.0.3",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
     "react-bootstrap": "^0.31.5",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.8.6",
+    "react-popper": "^0.7.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"

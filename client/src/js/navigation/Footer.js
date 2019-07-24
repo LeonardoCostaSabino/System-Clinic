@@ -4,8 +4,8 @@ class Footer extends Component {
   render () {
     return (
         <footer>
-          <div className="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          <div className="text-center">
+            <a href="/home">System Clinics criado em Node.js e React</a>
           </div>
           <div className="clearfix"></div>
         </footer>
