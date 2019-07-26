@@ -1,7 +1,5 @@
 import React from 'react';
-
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 class Text extends React.Component {
     constructor(props){

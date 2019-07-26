@@ -21,11 +21,11 @@ export default function (React, Row, Col, XPanel, PageTitle) {
                   <XPanel.Content>
                     <ControlLabel id="name" text="Enter your name" />
                     <ControlText id="basic" className="form-control"/>
-                    <Text Tamanho="2" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
-                    <Text Tamanho="5" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
-                    <Text Tamanho="5" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
-                    <Text Tamanho="5" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
-                    <Text Tamanho="6" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="2" Title="NomeCompleto" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="5" Title="NomeCompleto" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="5" Title="NomeCompleto" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="5" Title="NomeCompleto" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="6" Title="NomeCompleto" Name="Nome-completo" Text="Nome..."/>
                   </XPanel.Content>
                 </XPanel>
               </Col>

@@ -8,5 +8,5 @@ export default SideBar
 export {
   MenuSection,
   GroupMenuItem,
-  MenuItem
+  MenuItem,
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Login.css';
-import Form_Login from '../components/Forms/f_Login';
+import Form_Login from './f_Login';
 
 class Login extends React.Component {
 

@@ -24,3 +24,5 @@ export default function (React, Router, history, Left, Top, Footer, PageContent,
   return App;
 
 };
+
+

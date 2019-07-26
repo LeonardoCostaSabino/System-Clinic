@@ -1,5 +1,7 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import React, {Fragment} from 'react';
+import {Col} from 'react-bootstrap';
+import ControlLabel from '@mapbox/mr-ui/control-label';
+import ControlText from '@mapbox/mr-ui/control-text';
 
 class Text extends React.Component {
     constructor(props){
@@ -21,10 +23,12 @@ class Text extends React.Component {
         const { Title, Name, Text, Tamanho } = this.props
 
         return(
-        <Col xs={Tamanho}>
-            <label>{Title}</label>
-            <input type="text" className="form-control" onChange={this.handleInputChange} placeholder={Text} name={Name} />
-        </Col>
+            <Fragment>
+                <Col xs={Tamanho}>
+                    <ControlLabel text={Title} />
+                    <ControlText /><input type="text" className="form-control" onChange={this.handleInputChange} placeholder={Text} name={Name} />
+                </Col>
+            </Fragment>
         )
     };
 };
