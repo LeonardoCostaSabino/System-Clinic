@@ -1,33 +1,24 @@
 'use strict';
 
-const express = require('express');
-const path = require('path');
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
-// Constants
-const PORT = process.env.PORT || 8080;
-const HOST = '0.0.0.0';
+const db = require('./Config/db.js');
 
-const CLIENT_BUILD_PATH = path.join(__dirname, '../../client/build');
-
-// App
-const app = express();
-
-// Static files
-app.use(express.static(CLIENT_BUILD_PATH));
-
-// API
-app.get('/api', (req, res) => {
-  res.set('Content-Type', 'application/json');
-  let data = {
-    message: 'Hello world, Woooooeeeee!!!!'
-  };
-  res.send(JSON.stringify(data, null, 2));
+db.sequelize.sync({
+  force: true
+}).then(() => {
+  console.log('Drop and Resync with {force: true}');
 });
 
-// All remaining requests return the React app, so it can handle routing.
-app.get('*', function(request, response) {
-  response.sendFile(path.join(CLIENT_BUILD_PATH, 'index.html'));
-});
+require('./Route/usuarios.route.js')(app);
 
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+var server = app.listen(8080, function () {
+
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log("App Listening at http://%s:%s", host, port)
+});

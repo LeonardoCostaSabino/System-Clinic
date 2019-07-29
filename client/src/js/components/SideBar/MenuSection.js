@@ -8,10 +8,10 @@ const isActive = ({ location }) => (linkTo) => matchPath(location.pathname, {pat
 
 class MenuSection extends Component {
   render () {
-    const { title, children, shared } = this.props
-    const { activeSection } = shared.getState()
-    const active = activeSection === this
-    const toggle = (group) => shared.toggle(this, group)
+    const { title, children, shared } = this.props;
+    const { activeSection } = shared.getState();
+    const active = activeSection === this;
+    const toggle = (group) => shared.toggle(this, group);
 
     return (
       <div className={cn('menu_section', { active: true })}>
@@ -19,11 +19,11 @@ class MenuSection extends Component {
         <Route render={rcp => (
           <ul className="nav side-menu">
             { 
-              childrenWithProps(children, { 
+              childrenWithProps(children, {
                 toggle,
                 shared,
                 isActive: isActive(rcp), 
-                isActiveSection: active 
+                isactivesection: active
               })
             }
           </ul>

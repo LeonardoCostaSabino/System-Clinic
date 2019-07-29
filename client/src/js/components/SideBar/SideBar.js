@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { matchPath } from 'react-router'
 import SharedState from '../SharedState'
 import MenuSection from './MenuSection'
 import GroupMenuItem from './GroupMenuItem'
@@ -13,10 +12,10 @@ class SideBar extends Component {
     this.shared = SharedState(this, {
       toggle: (section, group) => {
         const activeGroup = group === this.activeGroup ? null : group
-        const activeSection = group ? section : null
+        const activeSection = group ===this.activeSection ? null : section;
         this.setState({ activeGroup, activeSection })
       }
-    })
+    });
     this.state = {
       activeSection: null,
       activeGroup: null

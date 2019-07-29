@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-class Text extends React.Component {
+class Range extends React.Component {
     constructor(props){
         super(props);  
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -29,4 +29,4 @@ class Text extends React.Component {
     };
 };
 
-export default Text;
+export default Range;

@@ -5,7 +5,7 @@ import childrenWithProps from '../childrenWithProps'
 class GroupMenuItem extends Component {
   render() {
     /* eslint no-unused-vars: 0 */
-    const { icon, title, shared, children, to, isActive, isActiveSection, toggle } = this.props
+    const { icon, title, shared, children, to, isActive, isactivesection, toggle } = this.props
     const { activeGroup } = shared.getState()
     const active = activeGroup === this
 
