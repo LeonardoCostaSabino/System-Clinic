@@ -15,4 +15,4 @@ module.exports = function(app) {
 
     // Delete a Customer with Id
     app.delete('/api/user/:id', user.delete);
-}
+};

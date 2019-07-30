@@ -1,32 +1,32 @@
 const db = require('../Config/db.js');
 const User = db.user;
 
-// Post a Customer
+// Post a User
 exports.create = (req, res) => {
     // Save to PostgreSQL database
-    Customer.create(req.body).then(customer => {
-        // Send created customer to client
-        res.json(customer);
+    User.create(req.body).then(user => {
+        // Send created user to client
+        res.json(user);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
     });
 };
 
-// FETCH All Customers
+// FETCH All Users
 exports.findAll = (req, res) => {
-    Customer.findAll().then(customers => {
-        // Send All Customers to Client
-        res.json(customers);
+    User.findAll().then(user => {
+        // Send All user to Client
+        res.json(user);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
     });
 };
 
-// Find a Customer by Id
+// Find a User by Id
 exports.findById = (req, res) => {
-    Customer.findById(req.params.id).then(customer => {
+    User.findById(req.params.id).then(customer => {
         res.json(customer);
     }).catch(err => {
         console.log(err);
@@ -34,25 +34,25 @@ exports.findById = (req, res) => {
     });
 };
 
-// Update a Customer
+// Update a User
 exports.update = (req, res) => {
     const id = req.body.id;
-    Customer.update( req.body,
+    User.update( req.body,
         { where: {id: id} }).then(() => {
-        res.status(200).json( { mgs: "Updated Successfully -> Customer Id = " + id } );
+        res.status(200).json( { mgs: "Updated Successfully -> User Id = " + id } );
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
     });
 };
 
-// Delete a Customer by Id
+// Delete a User by Id
 exports.delete = (req, res) => {
     const id = req.params.id;
-    Customer.destroy({
+    User.destroy({
         where: { id: id }
     }).then(() => {
-        res.status(200).json( { msg: 'Deleted Successfully -> Customer Id = ' + id } );
+        res.status(200).json( { msg: 'Deleted Successfully -> User Id = ' + id } );
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});

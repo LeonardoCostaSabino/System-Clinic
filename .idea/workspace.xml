@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb578ac5-aa72-4468-8331-ca4612298b9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/src/Config/db.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Config/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Models/consultas.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Models/grupos.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Models/pacientes.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Models/prontuarios.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Models/usuarios.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Route/usuarios.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/consultas.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/endereco.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/funcionarios.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/medico.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/pacientes.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/prontuarios.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/models/telefone.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form_range.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/Form_range.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/GroupMenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/GroupMenuItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/navigation/Left.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/navigation/Left.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/navigation/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/navigation/Top.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Database/Criação.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/Database/Criação.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Config/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Config/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Models/consultas.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Models/grupos.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/cargos.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Models/pacientes.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Models/prontuarios.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Models/usuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/usuarios.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Route/usuarios.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Route/usuarios.route.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,46 +50,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/Database/Criação.sql">
+        <entry file="file://$PROJECT_DIR$/server/src/models/pacientes.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="53" selection-start-line="53" selection-end-line="57" selection-end-column="75" />
+            <state relative-caret-position="475">
+              <caret line="71" column="16" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/Models/consultas.model.js">
+        <entry file="file://$PROJECT_DIR$/server/src/Config/db.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="212">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/Models/pacientes.model.js">
+        <entry file="file://$PROJECT_DIR$/server/src/Controller/usuarios.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/Models/usuarios.model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+            <state relative-caret-position="340">
+              <caret line="49" column="14" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="27" column="10" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/Config/env.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/src/Route/usuarios.route.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="336">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/models/cargos.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -108,6 +132,7 @@
       <find>menu_t</find>
       <find>cust</find>
       <find>first</find>
+      <find>Customer</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -125,14 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/js/routes/gerenciamento/clinicas/index.js" />
-        <option value="$PROJECT_DIR$/client/src/js/routes/gerenciamento/FormButtons.js" />
-        <option value="$PROJECT_DIR$/client/src/js/App.js" />
-        <option value="$PROJECT_DIR$/client/src/js/routes/relatorios/menu.js" />
-        <option value="$PROJECT_DIR$/client/src/js/components/SideBar/index.js" />
-        <option value="$PROJECT_DIR$/client/src/js/components/PageTitle.js" />
-        <option value="$PROJECT_DIR$/client/src/js/components/XPanel/index.js" />
-        <option value="$PROJECT_DIR$/client/src/js/components/Form_text.js" />
         <option value="$PROJECT_DIR$/Readme.md" />
         <option value="$PROJECT_DIR$/app/View/Pacientes/depedencias_Pacientes.php" />
         <option value="$PROJECT_DIR$/app/View/Pacientes/Header_Pac.php" />
@@ -160,19 +177,30 @@
         <option value="$PROJECT_DIR$/server/src/Controller/user.route.js" />
         <option value="$PROJECT_DIR$/server/src/Router/index.js" />
         <option value="$PROJECT_DIR$/server/src/Route/user.route.js" />
-        <option value="$PROJECT_DIR$/server/src/Config/db.js" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/server/src/Config/env.js" />
         <option value="$PROJECT_DIR$/server/src/Controller/user.controller.js" />
         <option value="$PROJECT_DIR$/server/Database/Criação.sql" />
         <option value="$PROJECT_DIR$/server/src/Models/user.model.js" />
         <option value="$PROJECT_DIR$/server/src/index.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/grupos.model.js" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/server/src/Config/env.js" />
+        <option value="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" />
+        <option value="$PROJECT_DIR$/server/src/Route/usuarios.route.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/cargos.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/telefone.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/endereco.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/medico.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/funcionarios.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Models/usuarios.model.js" />
         <option value="$PROJECT_DIR$/server/src/Models/prontuarios.model.js" />
         <option value="$PROJECT_DIR$/server/src/Models/pacientes.model.js" />
-        <option value="$PROJECT_DIR$/server/src/Models/grupos.model.js" />
         <option value="$PROJECT_DIR$/server/src/Models/consultas.model.js" />
-        <option value="$PROJECT_DIR$/server/src/Models/usuarios.model.js" />
-        <option value="$PROJECT_DIR$/server/src/Route/usuarios.route.js" />
+        <option value="$PROJECT_DIR$/server/src/models/funcionarios.model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/consultas.model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/cargos.model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/endereco.model.js" />
+        <option value="$PROJECT_DIR$/server/src/models/pacientes.model.js" />
+        <option value="$PROJECT_DIR$/server/src/Config/db.js" />
       </list>
     </option>
   </component>
@@ -189,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,52 +227,13 @@
             <path>
               <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto-React" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto-React" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Route" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +308,8 @@
       <workItem from="1564073173671" duration="1446000" />
       <workItem from="1564076765050" duration="5984000" />
       <workItem from="1564157033636" duration="13215000" />
-      <workItem from="1564417340721" duration="17807000" />
+      <workItem from="1564417340721" duration="17910000" />
+      <workItem from="1564502140663" duration="18404000" />
     </task>
     <task id="LOCAL-00001" summary="Revisão de arquivos(andamento)">
       <created>1564176526800</created>
@@ -329,17 +318,24 @@
       <option name="project" value="LOCAL" />
       <updated>1564176526801</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Criação do Servidor de conexão do Sequelize">
+      <created>1564435759775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564435759775</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40549000" />
+    <option name="totallyTimeSpent" value="59056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1415" y="-1" width="1317" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49841774" visible="true" weight="0.34799686" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49841774" visible="true" weight="0.3534957" />
       <window_info id="Structure" order="1" sideWeight="0.50158226" side_tool="true" weight="0.3432836" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,7 +354,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3299293" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,17 +409,10 @@
     </ignored-roots>
     <MESSAGE value="Add o Gentella React" />
     <MESSAGE value="Revisão de arquivos(andamento)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revisão de arquivos(andamento)" />
+    <MESSAGE value="Criação do Servidor de conexão do Sequelize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação do Servidor de conexão do Sequelize" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/node_js/BancodeDados.js" />
-    <entry file="file://$PROJECT_DIR$/app/node_js/Config.js" />
-    <entry file="file://$PROJECT_DIR$/app/node_js/index.js" />
-    <entry file="file://$PROJECT_DIR$/app/node_js/Rotas.js" />
-    <entry file="file://$PROJECT_DIR$/app/node_js/Rotas_get.js" />
-    <entry file="file://$PROJECT_DIR$/app/Past/Login.js" />
-    <entry file="file://$PROJECT_DIR$/app/Back.js" />
-    <entry file="file://$PROJECT_DIR$/app/New.js" />
     <entry file="file://$PROJECT_DIR$/client/src/js/components/Transição/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -453,13 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -644,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/js/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/js/components/SideBar/GroupMenuItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -661,104 +636,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="28" />
+        <state relative-caret-position="-105">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="e#25#392#0" />
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#153#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/js/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/js/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/js/routes/PageContent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/js/routes/relatorios/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="331">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Config/env.js">
+    <entry file="file://$PROJECT_DIR$/server/src/models/medico.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Config/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Controller/usuarios.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-397">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Models/prontuarios.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Models/grupos.model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="5" selection-end-column="28" />
+        <state relative-caret-position="651">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/Database/Criação.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="53" selection-start-line="53" selection-end-line="57" selection-end-column="75" />
+        <state relative-caret-position="369">
+          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Models/consultas.model.js">
+    <entry file="file://$PROJECT_DIR$/server/src/models/usuarios.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="168">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Models/pacientes.model.js">
+    <entry file="file://$PROJECT_DIR$/server/src/models/telefone.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        <state relative-caret-position="-281">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="7" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/Models/usuarios.model.js">
+    <entry file="file://$PROJECT_DIR$/server/src/models/prontuarios.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        <state relative-caret-position="126">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/consultas.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="60" column="2" lean-forward="true" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/funcionarios.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="71" column="50" lean-forward="true" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/endereco.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/pacientes.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="71" column="16" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/Config/env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/models/cargos.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/Route/usuarios.route.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="336">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/Config/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/Controller/usuarios.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="27" column="10" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="10" />
         </state>
       </provider>
     </entry>

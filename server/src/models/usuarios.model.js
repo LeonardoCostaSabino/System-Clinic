@@ -1,5 +1,11 @@
 module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define('usuarios', {
+        //ID do Cargo
+        ID: {
+            type: Sequelize.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
+        },
         Nome: {
             type: Sequelize.STRING,
             required: true,

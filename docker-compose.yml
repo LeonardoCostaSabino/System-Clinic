@@ -1,4 +1,4 @@
-version: '2'
+version: '3.7'
 services:
   server:
     build:
@@ -13,6 +13,10 @@ services:
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
+    networks:
+      Backend:
+        ipv4_address: 172.16.201.11
+
   postgres:
     image: postgres:11.1-alpine
     restart: "no"
@@ -25,6 +29,10 @@ services:
       - POSTGRES_DB=system
     ports:
       - "8084:5432"
+    networks:
+      Backend:
+        ipv4_address: 172.16.201.10
+
   client:
     build:
       context: ./client/
@@ -36,5 +44,25 @@ services:
       - server
     ports:
       - "3000:3000"
+    networks:
+        Frontend:
+            ipv4_address: 172.16.200.10
+
 volumes:
   pgdata:
+
+networks:
+  Frontend:
+    name: network_node
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.200.0/24
+  Backend:
+    name: network_Banco
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.201.0/24

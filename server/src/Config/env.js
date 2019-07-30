@@ -2,7 +2,7 @@ const env = {
     database: 'system',
     username: 'sabino',
     password: '123456',
-    host: '172.28.0.4',
+    host: '172.16.201.10',
     dialect: 'postgres',
     pool: {
         max: 5,

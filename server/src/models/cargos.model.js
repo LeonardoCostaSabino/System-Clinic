@@ -1,20 +1,23 @@
 module.exports = (sequelize, Sequelize) => {
-    const Grupos = Sequelize.define('grupos', {
+    const Cargos = sequelize.define('cargos', {
+        //ID do Cargo
         ID: {
-            type: Sequelize.INT,
+            type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
+        //Label do Cargo
         Nome: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
+        //Descrição do Cargo
         Descricao: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         }
     });
-    return Grupos;
+    return Cargos;
 };
