@@ -1,52 +1,54 @@
 module.exports = (sequelize, Sequelize) => {
-    const Consultas = sequelize.define('consultas', {
+    const Pessoa = sequelize.define('pessoas',{
+        //ID do Cargo
         ID: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        Data: {
-            type: Sequelize.DATE,
-            required:  true,
+        CPF: {
+            type: Sequelize.INTEGER,
+            required: true,
             allowNull: false
         },
-        Descricao: {
+        RG: {
+            type: Sequelize.INTEGER,
+        },
+        Nome: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        Borda: {
-            type: Sequelize.BOOLEAN,
+        Genero: {
+            type: Sequelize.STRING
+        },
+        DataNascimento: {
+            type: Sequelize.DATE,
             required: true,
-            allowNull: false
+            allowNull: true
         },
-        Estilo: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false
-        },
-        Hora: {
-            type: Sequelize.TIME,
-            required:  true,
-            allowNull: false
-        },
-        Funcionario_id: {
-            type: Sequelize.INTEGER,
-            required:  true,
-            allowNull: false,
-            references: {
-                model: 'funcionarios',
-                key: 'ID'
-            }
-        },
-        Paciente_id: {
+        Endereco_id: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                required: true,
+                references: {
+                    model: 'enderecos',
+                    key: 'ID'
+                }
+            },
+        Usuario_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,
             references: {
-                model: 'pacientes',
+                model: 'usuarios',
                 key: 'ID'
             }
+        },
+        Telefone_id: {
+            type: Sequelize.INTEGER,
+            required: true,
+            allowNull: true
         },
         createdAt: {
             type: Sequelize.DATE,
@@ -58,7 +60,7 @@ module.exports = (sequelize, Sequelize) => {
         },
     }, {
         sequelize,
-        modelName: 'consultas'
+        modelName: 'pessoas'
     });
-    return Consultas;
+    return Pessoa;
 };

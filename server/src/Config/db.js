@@ -20,18 +20,33 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 //models/tables
-db.cargos = require('../models/cargos.model.js')(sequelize, Sequelize);
-// db.consultas = require('../models/consultas.model.js')(sequelize, Sequelize);
-// db.endereco = require('../models/endereco.model.js')(sequelize, Sequelize);
-// db.funcionarios = require('../models/funcionarios.model.js')(sequelize, Sequelize);
-// db.medico = require('../models/medico.model.js')(sequelize, Sequelize);
-db.paciente = require('../models/pacientes.model.js')(sequelize, Sequelize);
-// db.prontuario = require('../models/prontuarios.model.js')(sequelize, Sequelize);
-db.telefone = require('../models/telefone.model.js')(sequelize, Sequelize);
-db.user = require('../models/usuarios.model.js')(sequelize, Sequelize);
 
-db.paciente.hasMany(db.telefone, {as: 'telefone', constraints: false, foreignKey: 'Telefone_id'});
-db.paciente.belongsTo(db.user, {as: 'user', constraints: false, foreignKey: 'Usuario_id'});
-db.paciente.belongsTo(db.cargos, {as: 'cargos', constraints: false, foreignKey: 'Cargo_id'});
+db.acesso = require('../models/acesso.model')(sequelize, Sequelize);
+db.cargos = require('../models/cargos.model')(sequelize, Sequelize);
+db.usuarios = require('../models/usuarios.model')(sequelize, Sequelize);
+db.telefone = require('../models/telefone.model')(sequelize, Sequelize);
+db.enderecos = require('../models/endereco.model')(sequelize, Sequelize);
+db.pessoa = require('../models/pessoas.model')(sequelize, Sequelize);
+db.funcionario = require('../models/funcionarios.model')(sequelize, Sequelize);
+db.pacientes = require('../models/pacientes.model')(sequelize, Sequelize);
+db.consultas = require('../models/consultas.model')(sequelize, Sequelize);
+db.protuarios = require('../models/prontuarios.model')(sequelize, Sequelize);
+
+//Relations
+
+db.pessoa.belongsTo(db.usuarios, {foreignKey: 'Usuario_id'});
+db.pessoa.belongsTo(db.enderecos, {foreignKey: 'Endereco_id'});
+db.telefone.hasMany(db.pessoa, {constrains: false, foreignKey: 'Telefone_id'});
+
+db.funcionario.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'});
+
+db.pacientes.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'});
+
+db.protuarios.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'});
+db.protuarios.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'});
+db.consultas.hasMany(db.protuarios, {constrains: false, foreignKey: 'Consultas_id'});
+
+db.consultas.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'});
+db.consultas.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'});
 
 module.exports = db;

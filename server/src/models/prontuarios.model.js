@@ -6,33 +6,6 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Medico: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false,
-            references: {
-                model: 'medicos',
-                key: 'ID'
-            }
-        },
-        Paciente: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false,
-            references: {
-                model: 'pacientes',
-                key: 'ID'
-            }
-        },
-        Consultas: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false,
-            references: {
-                model: 'consultas',
-                key: 'ID'
-            }
-        },
         Descricao: {
             type: Sequelize.STRING
         },
@@ -41,6 +14,46 @@ module.exports = (sequelize, Sequelize) => {
         },
         Alergia: {
             type: Sequelize.STRING
-        }
+        },
+        Paciente_id: {
+            type: Sequelize.INTEGER,
+            required: true,
+            allowNull: false,
+            references: {
+                model: 'pacientes',
+                key: 'ID'
+            },
+        },
+        Funcionario_id: {
+            type: Sequelize.INTEGER,
+            required: true,
+            allowNull: false,
+            references: {
+                model: 'funcionarios',
+                key: 'ID'
+            },
+        },
+        Consultas_id: {
+            type: Sequelize.INTEGER,
+            required: true,
+            allowNull: false,
+            references: {
+                model: 'consultas',
+                key: 'ID'
+            },
+        },
+        createdAt: {
+            type: Sequelize.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: Sequelize.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+    }, {
+        sequelize,
+        modelName: 'prontuarios'
     });
-}
+    return Prontuarios;
+};
+

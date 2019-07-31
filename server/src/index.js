@@ -7,6 +7,14 @@ app.use(bodyParser.json());
 
 const db = require('./Config/db.js');
 
+db.sequelize.authenticate()
+    .then(() =>{
+      console.log('A conexão foi estabelecida com sucesso');
+    })
+    .catch(err =>{
+      console.log('Não foi possivel de manter a conexão com o Banco de Dados', err);
+    });
+
 db.sequelize.sync({
   force: true
 }).then(() => {

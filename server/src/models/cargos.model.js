@@ -1,23 +1,30 @@
 module.exports = (sequelize, Sequelize) => {
-    const Cargos = sequelize.define('cargos', {
+    const Cargos = sequelize.define('cargos',{
         //ID do Cargo
         ID: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        //Label do Cargo
         Nome: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        //Descrição do Cargo
         Descricao: {
-            type: Sequelize.STRING,
-            required: true,
-            allowNull: false
-        }
+            type: Sequelize.STRING
+        },
+        createdAt: {
+            type: Sequelize.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+        updatedAt: {
+            type: Sequelize.DATE,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
+        },
+    }, {
+        sequelize,
+        modelName: 'cargos'
     });
     return Cargos;
 };

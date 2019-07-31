@@ -1,12 +1,12 @@
 const db = require('../Config/db.js');
-const User = db.user;
+const User = db.usuarios;
 
 // Post a User
 exports.create = (req, res) => {
     // Save to PostgreSQL database
-    User.create(req.body).then(user => {
+    User.create(req.body).then(usuarios => {
         // Send created user to client
-        res.json(user);
+        res.json(usuarios);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});

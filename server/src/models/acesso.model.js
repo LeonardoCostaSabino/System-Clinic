@@ -1,30 +1,19 @@
 module.exports = (sequelize, Sequelize) => {
-    const User = sequelize.define('usuarios', {
-        //ID do Cargo
+    const Acesso = sequelize.define('acesso', {
         ID: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
-        NickName: {
+        Nome: {
             type: Sequelize.STRING,
+            required: true,
+            allowNull: false
         },
-        Email: {
+        Descricao: {
             type: Sequelize.STRING,
-        },
-        Senha: {
-            type: Sequelize.STRING,
-            // required: true,
-            // allowNull: false
-        },
-        Acesso_id: {
-            type: Sequelize.INTEGER,
-            // required: true,
-            // allowNull: false,
-            references: {
-                model: 'acessos',
-                key: 'ID'
-            }
+            required: true,
+            allowNull: false
         },
         createdAt: {
             type: Sequelize.DATE,
@@ -36,7 +25,7 @@ module.exports = (sequelize, Sequelize) => {
         },
     }, {
         sequelize,
-        modelName: 'usuarios'
+        modelName: 'acesso'
     });
-    return User;
-}
+    return Acesso;
+};

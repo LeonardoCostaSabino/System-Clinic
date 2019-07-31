@@ -1,6 +1,8 @@
 version: '3.7'
 services:
   server:
+    depends_on:
+      - postgres
     build:
       context: ./server/
     command: /usr/app/node_modules/.bin/nodemon src/index.js
