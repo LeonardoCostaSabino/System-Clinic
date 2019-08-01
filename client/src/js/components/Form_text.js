@@ -25,8 +25,8 @@ class Text extends React.Component {
         return(
             <Fragment>
                 <Col xs={Tamanho}>
-                    <ControlLabel text={Title} />
-                    <ControlText /><input type="text" className="form-control" onChange={this.handleInputChange} placeholder={Text} name={Name} />
+                    <ControlLabel  text={Title} />
+                    <ControlText placeholder={Text} name={Name} className="form-control" onChange={this.handleInputChange} />
                 </Col>
             </Fragment>
         )

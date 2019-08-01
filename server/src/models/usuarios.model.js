@@ -14,13 +14,13 @@ module.exports = (sequelize, Sequelize) => {
         },
         Senha: {
             type: Sequelize.STRING,
-            // required: true,
-            // allowNull: false
+            required: true,
+            allowNull: false
         },
         Acesso_id: {
             type: Sequelize.INTEGER,
-            // required: true,
-            // allowNull: false,
+            required: true,
+            allowNull: false,
             references: {
                 model: 'acessos',
                 key: 'ID'

@@ -1,3 +1,5 @@
+import Text from '../../../components/Form_text';
+
 export default function (React, Row, Col, XPanel, PageTitle) {
 
     class Pacientes extends React.Component {
@@ -14,7 +16,11 @@ export default function (React, Row, Col, XPanel, PageTitle) {
                   <XPanel.Title title="Form Design">
                   </XPanel.Title>
                   <XPanel.Content>
-                    <span>tba...</span>
+                    <Text Tamanho="3" Title="Nome Completo" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="3" Title="CPF" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="3" Title="RG" Name="Nome-completo" Text="Nome..."/>
+                    <Text Tamanho="3" Title="Data de Nascimento" Name="Nome-completo" Text="Nome..."/>
+
                   </XPanel.Content>
                 </XPanel>
               </Col>

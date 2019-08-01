@@ -1,12 +1,12 @@
 const db = require('../Config/db.js');
-const User = db.usuarios;
+const Prontuarios = db.protuarios;
 
 // Post a User
 exports.create = (req, res) => {
     // Save to PostgreSQL database
-    User.create(req.body).then(usuarios => {
+    Prontuarios.create(req.body).then(prontuarios => {
         // Send created user to client
-        res.json(usuarios);
+        res.json(prontuarios);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
@@ -15,9 +15,9 @@ exports.create = (req, res) => {
 
 // FETCH All Users
 exports.findAll = (req, res) => {
-    User.findAll().then(usuarios => {
+    Prontuarios.findAll().then(prontuarios => {
         // Send All user to Client
-        res.json(usuarios);
+        res.json(prontuarios);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
@@ -26,8 +26,8 @@ exports.findAll = (req, res) => {
 
 // Find a User by Id
 exports.findByPk = (req, res) => {
-    User.findByPk(req.body.params).then(usuarios => {
-        res.json(usuarios);
+    Prontuarios.findByPk(req.params.id).then(prontuarios => {
+        res.json(prontuarios);
     }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
@@ -37,7 +37,7 @@ exports.findByPk = (req, res) => {
 // Update a User
 exports.update = (req, res) => {
     const id = req.body.id;
-    User.update( req.body,
+    Prontuarios.update( req.body,
         { where: {id: id} }).then(() => {
         res.status(200).json( { mgs: "Updated Successfully -> User Id = " + id } );
     }).catch(err => {
@@ -48,8 +48,8 @@ exports.update = (req, res) => {
 
 // Delete a User by Id
 exports.delete = (req, res) => {
-    const id = req.params.ID;
-    User.destroy({
+    const id = req.params.id;
+    Prontuarios.destroy({
         where: { id: id }
     }).then(() => {
         res.status(200).json( { msg: 'Deleted Successfully -> User Id = ' + id } );
