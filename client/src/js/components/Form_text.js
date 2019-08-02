@@ -4,20 +4,15 @@ import ControlLabel from '@mapbox/mr-ui/control-label';
 import ControlText from '@mapbox/mr-ui/control-text';
 
 class Text extends React.Component {
-    constructor(props){
-        super(props);  
-        this.handleInputChange = this.handleInputChange.bind(this);
+    constructor(props) {
+        super(props);
+        this.state = { value: ''};
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-
-        this.setState({
-            [name]: value
-        });
-    }
+    handleChange = value => {
+        this.setState({ value });
+    };
 
     render(){
         const { Title, Name, Text, Tamanho } = this.props
@@ -26,7 +21,12 @@ class Text extends React.Component {
             <Fragment>
                 <Col xs={Tamanho}>
                     <ControlLabel  text={Title} />
-                    <ControlText placeholder={Text} name={Name} className="form-control" onChange={this.handleInputChange} />
+                    <ControlText
+                        value={this.state.value}
+                        placeholder={Text}
+                        name={Name}
+                        className="form-control"
+                        onChange={this.handleChange} />
                 </Col>
             </Fragment>
         )

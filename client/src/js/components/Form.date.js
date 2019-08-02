@@ -1,27 +1,39 @@
+import React, {Fragment} from 'react';
+import {Col} from 'react-bootstrap';
+import ControlLabel from '@mapbox/mr-ui/control-label';
 import moment from 'moment';
-import ControlDate from '@mapbox/mr-ui/control-date';
+import 'moment/locale/pt'
+import 'rc-datepicker/lib/style.css';
+import { DatePicker, DatePickerInput } from 'rc-datepicker';
+
+moment.locale('pt-br');
+
 
 export default class Date extends React.Component {
-    state = { dateValue: '' };
 
-    onDateChange = dateValue => {
-        this.setState({ dateValue });
+    state = {
+        datePickerDate: '2015-05-13',
+        datePickerInputDate: null,
+        datePickerInputDate2: null,
+        showInput: true,
+        disabled: false
     };
 
+    onClear = () => this.setState({ datePickerDate: null })
+
+    log = (...x) => console.log(...x) // eslint-disable-line no-console
+
     render() {
-        const {Text,Name} = this.props;
+        const {Text, Name, Tamanho, Title} = this.props;
         return (
             <Fragment>
                 <Col xs={Tamanho}>
-                    <ControlDate
-                        id="singleDate"
-                        moment={moment}
-                        value={this.state.dateValue}
-                        onChange={this.onDateChange}
-                        placeholder={Text}
-                        format={'DD MM YYYY'}
-                        name={Name}
-                    />
+                    <ControlLabel className="form-control" text={Title} />
+                    <DatePickerInput
+                        displayFormat='DD/MM/YYYY'
+                        onChange={(jsDate, dateString) => this.setState({ datePickerInputDate: dateString })}
+                        showOnInputClick
+                        locale='pt-BR' />
                 </Col>
             </Fragment>
         );

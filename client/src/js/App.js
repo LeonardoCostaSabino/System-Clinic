@@ -1,5 +1,3 @@
-import history from './history';
-
 export default function (React, Router, history, Left, Top, Footer, PageContent, Menu) {
 
   class App extends React.Component {
