@@ -4,10 +4,9 @@ import ControlLabel from '@mapbox/mr-ui/control-label';
 import moment from 'moment';
 import 'moment/locale/pt'
 import 'rc-datepicker/lib/style.css';
-import { DatePicker, DatePickerInput } from 'rc-datepicker';
+import { DatePickerInput } from 'rc-datepicker';
 
 moment.locale('pt-br');
-
 
 export default class Date extends React.Component {
 
@@ -24,7 +23,7 @@ export default class Date extends React.Component {
     log = (...x) => console.log(...x) // eslint-disable-line no-console
 
     render() {
-        const {Text, Name, Tamanho, Title} = this.props;
+        const {Tamanho, Title} = this.props;
         return (
             <Fragment>
                 <Col xs={Tamanho}>

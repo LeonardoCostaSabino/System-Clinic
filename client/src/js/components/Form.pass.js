@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 import {Col} from 'react-bootstrap';
 import ControlLabel from '@mapbox/mr-ui/control-label';
-import InputMask from 'react-input-mask';
 
 class Text extends React.Component {
     constructor(props) {
@@ -15,19 +14,13 @@ class Text extends React.Component {
     };
 
     render(){
-        const { Title, Name, Text, Tamanho, Mascara } = this.props;
+        const { Title, Name, Text, Tamanho } = this.props;
 
         return(
             <Fragment>
                 <Col xs={Tamanho}>
-                    <ControlLabel  text={Title} />
-                    <InputMask
-                        mask={Mascara}
-                        maskChar="_"
-                        placeholder={Text}
-                        name={Name}
-                        className="form-control"
-                        onChange={this.handleChange} />
+                    <ControlLabel text={Title} />
+                    <input className="form-control" type="password" name={Name}  id="password"/>
                 </Col>
             </Fragment>
         )
