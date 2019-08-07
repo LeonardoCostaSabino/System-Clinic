@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Col} from 'react-bootstrap';
 import ControlLabel from '@mapbox/mr-ui/control-label';
 
-class Text extends React.Component {
+class Pass extends React.Component {
     constructor(props) {
         super(props);
         this.state = { value: ''};
@@ -27,4 +27,4 @@ class Text extends React.Component {
     };
 };
 
-export default Text;
+export default Pass;
