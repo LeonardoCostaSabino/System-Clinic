@@ -2,14 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb578ac5-aa72-4468-8331-ca4612298b9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/js/components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Cadastro_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Consulta_grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form.pass.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/Form.pass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Button-Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/Button-Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form.date.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form.pass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form_range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/Form_text.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/GroupMenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/GroupMenuItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/MenuSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/navigation/Top.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/navigation/Top.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/FormButtons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/FormButtons.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/FormsMenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/GeneralForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/GeneralForm.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/clinicas/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/clinicas/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Cadastro_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Cadastro_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Consulta_grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/Consulta_grid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/js/routes/gerenciamento/pacientes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Config/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Controller/pacientes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/pacientes.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Route/acesso.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Route/acesso.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Route/endereco.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Route/endereco.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Route/telefone.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Route/telefone.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Route/usuarios.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Route/usuarios.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/acesso.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/acesso.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/cargos.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/cargos.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/consultas.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/consultas.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/endereco.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/endereco.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/funcionarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/funcionarios.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/pacientes.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/pacientes.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/pessoas.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/pessoas.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/prontuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/prontuarios.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/telefone.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/telefone.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/models/usuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/usuarios.model.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +188,7 @@
       <workItem from="1565022028449" duration="3381000" />
       <workItem from="1565035608028" duration="4941000" />
       <workItem from="1565194033211" duration="64000" />
-      <workItem from="1565194125295" duration="18093000" />
+      <workItem from="1565194125295" duration="31865000" />
     </task>
     <task id="LOCAL-00001" summary="Revisão de arquivos(andamento)">
       <created>1564176526800</created>
@@ -209,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565040570559</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Formulário de Pacientes pronto">
+      <created>1565212631181</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565212631182</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +303,8 @@
     <MESSAGE value="Fazendo Formulário de Pacientes" />
     <MESSAGE value="Atualizando" />
     <MESSAGE value="Formulário pré-pronto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formulário pré-pronto" />
+    <MESSAGE value="Formulário de Pacientes pronto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formulário de Pacientes pronto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

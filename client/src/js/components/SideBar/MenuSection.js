@@ -4,17 +4,15 @@ import { matchPath } from 'react-router'
 import cn from 'classnames'
 import childrenWithProps from '../childrenWithProps'
 
-const isActive = ({ location }) => (linkTo) => matchPath(location.pathname, {path: linkTo, exact: false, strict: false})
+const isActive = ({ location }) => (linkTo) => matchPath(location.pathname, {path: linkTo, exact: false, strict: false});
 
 class MenuSection extends Component {
   render () {
     const { title, children, shared } = this.props;
-    const { activeSection } = shared.getState();
-    const active = activeSection === this;
     const toggle = (group) => shared.toggle(this, group);
 
     return (
-      <div className={cn('menu_section', { active: true })}>
+      <div className={cn('menu_section')}>
         <h3>{title}</h3>
         <Route render={rcp => (
           <ul className="nav side-menu">
@@ -23,7 +21,7 @@ class MenuSection extends Component {
                 toggle,
                 shared,
                 isActive: isActive(rcp), 
-                isactivesection: active
+                isactivesection: "true"
               })
             }
           </ul>

@@ -1,10 +1,16 @@
 const db = require('../Config/db.js');
 const Pacientes = db.pacientes;
 
+const Pessoas = db.pessoa;
+const Telefone = db.telefone;
+const Endereco = db.enderecos;
+
 // Post a User
 exports.create = (req, res) => {
     // Save to PostgreSQL database
-    Pacientes.create(req.body).then(pacientes => {
+    Pacientes.create(req.body,{
+        include: Pessoas, Telefone, Endereco
+    }).then(pacientes => {
         // Send created user to client
         res.json(pacientes);
     }).catch(err => {

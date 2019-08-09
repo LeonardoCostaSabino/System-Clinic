@@ -2,17 +2,17 @@ module.exports = function(app) {
     const endereco = require('../Controller/endereco.controller');
 
     // Create a new Customer
-    app.post('/api/endereco', endereco.create);
+    app.post('/api/enderecos', endereco.create);
 
     // Retrieve all Customer
-    app.get('/api/endereco', endereco.findAll);
+    app.get('/api/enderecos', endereco.findAll);
 
     // Retrieve a single Customer by Id
-    app.get('/api/endereco/:id', endereco.findByPk);
+    app.get('/api/enderecos/:id', endereco.findByPk);
 
     // Update a Customer with Id
-    app.put('/api/endereco', endereco.update);
+    app.put('/api/enderecos', endereco.update);
 
     // Delete a Customer with Id
-    app.delete('/api/endereco/:id', endereco.delete);
+    app.delete('/api/enderecos/:id', endereco.delete);
 };

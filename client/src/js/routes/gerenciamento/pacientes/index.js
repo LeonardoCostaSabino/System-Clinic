@@ -1,6 +1,6 @@
 import ButtonHeader from '../../../components/Button-Header';
-import Cadastro_form from "./Cadastro_form";
-import Consulta_grid from "./Consulta_grid";
+import Cadastro from "./Cadastro_form";
+import Consulta from "./Consulta_grid";
 
 export default function (React, Row, Col, XPanel, PageTitle) {
 
@@ -36,7 +36,7 @@ export default function (React, Row, Col, XPanel, PageTitle) {
                                 <XPanel.Title title="Itens Obrigatórios">
                                 </XPanel.Title>
                                 <XPanel.Content>
-                                    <Cadastro_form/>
+                                    <Cadastro/>
                                 </XPanel.Content>
                             </XPanel>
                         </Col>
@@ -72,7 +72,7 @@ export default function (React, Row, Col, XPanel, PageTitle) {
                                 <XPanel.Title title="A procura de uma paciente...">
                                 </XPanel.Title>
                                 <XPanel.Content>
-                                    <Consulta_grid/>
+                                    <Consulta/>
                                 </XPanel.Content>
                             </XPanel>
                         </Col>

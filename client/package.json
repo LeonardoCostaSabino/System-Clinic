@@ -5,10 +5,12 @@
   "dependencies": {
     "@mapbox/mr-ui": "^0.7.2",
     "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "cors": "^2.8.5",
     "emitter-js": "^2.0.2",
+    "express": "^4.17.1",
     "install": "^0.13.0",
     "moment": "^2.24.0",
-    "npm": "^6.10.2",
     "rc-datepicker": "^5.0.14",
     "react": "^16.8.6",
     "react-bootstrap": "^0.31.5",

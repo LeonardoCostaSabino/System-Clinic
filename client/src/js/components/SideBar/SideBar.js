@@ -4,14 +4,14 @@ import MenuSection from './MenuSection'
 import GroupMenuItem from './GroupMenuItem'
 import MenuItem from './MenuItem'
 
-const childrenWithProps = (children, props) => React.Children.map(children, c => React.cloneElement(c, props))
+const childrenWithProps = (children, props) => React.Children.map(children, c => React.cloneElement(c, props));
 
 class SideBar extends Component {
   constructor(props) {
     super(props)
     this.shared = SharedState(this, {
       toggle: (section, group) => {
-        const activeGroup = group === this.activeGroup ? null : group
+        const activeGroup = group === this.activeGroup ? null : group;
         const activeSection = group ===this.activeSection ? null : section;
         this.setState({ activeGroup, activeSection })
       }

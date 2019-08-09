@@ -6,16 +6,8 @@ import NotificationsMenuItem from './NotificationsMenuItem'
 // import childrenWithProps from '../childrenWithProps'
 
 class Top extends Component {
+
   render () {
-
-    // const { icon, title, shared, children, to, isActive, isactivesection, toggle } = this.props
-    // const { activeGroup } = shared.getState()
-    // const active = activeGroup === this
-    //
-    // style={ { display: active ? 'block' : 'none' } }
-    //
-    // onClick={ () => toggle(this) }
-
     return (
       <div className="top_nav">
         <div className="nav_menu">

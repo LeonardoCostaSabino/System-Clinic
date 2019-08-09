@@ -15,6 +15,9 @@ module.exports = (sequelize, Sequelize) => {
             required: true,
             allowNull: false
         },
+        Celular: {
+            type: Sequelize.INTEGER,
+        },
         createdAt: {
             type: Sequelize.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')

@@ -2,17 +2,17 @@ module.exports = function(app) {
     const acesso = require('../Controller/acesso.controller');
 
     // Create a new Customer
-    app.post('/api/acesso', acesso.create);
+    app.post('/api/acessos', acesso.create);
 
     // Retrieve all Customer
-    app.get('/api/acesso', acesso.findAll);
+    app.get('/api/acessos', acesso.findAll);
 
     // Retrieve a single Customer by Id
-    app.get('/api/acesso/:id', acesso.findByPk);
+    app.get('/api/acessos/:id', acesso.findByPk);
 
     // Update a Customer with Id
-    app.put('/api/acesso', acesso.update);
+    app.put('/api/acessos', acesso.update);
 
     // Delete a Customer with Id
-    app.delete('/api/acesso/:id', acesso.delete);
+    app.delete('/api/acessos/:id', acesso.delete);
 };

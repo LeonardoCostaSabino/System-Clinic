@@ -34,19 +34,19 @@ db.protuarios = require('../models/prontuarios.model')(sequelize, Sequelize);
 
 //Relations
 
-db.pessoa.belongsTo(db.usuarios, {foreignKey: 'Usuario_id'});
-db.pessoa.belongsTo(db.enderecos, {foreignKey: 'Endereco_id'});
-db.telefone.hasMany(db.pessoa, {constrains: false, foreignKey: 'Telefone_id'});
+db.pessoa.belongsTo(db.usuarios, {foreignKey: 'Usuario_id'}); //1:1
+db.pessoa.belongsTo(db.enderecos, {foreignKey: 'Endereco_id'}); //1:1
+db.telefone.hasMany(db.pessoa, {constrains: false, foreignKey: 'Telefone_id'}); //1:N
 
-db.funcionario.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'});
+db.funcionario.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'}); //1:1
 
-db.pacientes.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'});
+db.pacientes.belongsTo(db.pessoa, {foreignKey: 'Pessoas_id'}); //1:1
 
-db.protuarios.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'});
-db.protuarios.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'});
-db.consultas.hasMany(db.protuarios, {constrains: false, foreignKey: 'Consultas_id'});
+db.protuarios.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'}); //1:1
+db.protuarios.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'}); //1:1
+db.consultas.hasMany(db.protuarios, {constrains: false, foreignKey: 'Consultas_id'}); //1:N
 
-db.consultas.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'});
-db.consultas.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'});
+db.consultas.belongsTo(db.pacientes, {foreignKey: 'Paciente_id'}); //1:1
+db.consultas.belongsTo(db.funcionario, {foreignKey: 'Funcionario_id'}); //1:1
 
 module.exports = db;

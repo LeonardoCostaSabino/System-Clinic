@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Endereco = sequelize.define('enderecos', {
-        ID: {
+        id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true

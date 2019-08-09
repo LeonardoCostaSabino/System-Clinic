@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define('usuarios', {
         //ID do Cargo
-        ID: {
+        id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -23,7 +23,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false,
             references: {
                 model: 'acessos',
-                key: 'ID'
+                key: 'id'
             }
         },
         createdAt: {

@@ -52,11 +52,14 @@ export default class CadForm extends React.Component{
     }
 
     submit(event){
-        const data = this.state;
-        axios.post('http://localhost:8080/api/pacientes',{data})
-            .then(response => {
-                console.log(data)
-            })
+        const form = this.state;
+        var data = new FormData();
+        data.append('JSON', JSON.stringify(form));
+        fetch('http://localhost:8080/api/pessoas', {
+            method: 'POST',
+            body: data
+        })
+            .then(res => res.json());
         Swal.fire({
             title: 'Parabens',
             type: 'success',

@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
     const Pessoa = sequelize.define('pessoas',{
         //ID do Cargo
-        ID: {
+        id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -33,7 +33,7 @@ module.exports = (sequelize, Sequelize) => {
                 required: true,
                 references: {
                     model: 'enderecos',
-                    key: 'ID'
+                    key: 'id'
                 }
             },
         Usuario_id: {
@@ -42,7 +42,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false,
             references: {
                 model: 'usuarios',
-                key: 'ID'
+                key: 'id'
             }
         },
         Telefone_id: {

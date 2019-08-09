@@ -2,17 +2,17 @@ module.exports = function(app) {
     const user = require('../Controller/usuarios.controller.js');
 
     // Create a new Customer
-    app.post('/api/user', user.create);
+    app.post('/api/usuarios', user.create);
 
     // Retrieve all Customer
-    app.get('/api/user', user.findAll);
+    app.get('/api/usuarios', user.findAll);
 
     // Retrieve a single Customer by Id
-    app.get('/api/user/:id', user.findByPk);
+    app.get('/api/usuarios/:id', user.findByPk);
 
     // Update a Customer with Id
-    app.put('/api/user', user.update);
+    app.put('/api/usuarios', user.update);
 
     // Delete a Customer with Id
-    app.delete('/api/user/:id', user.delete);
+    app.delete('/api/usuarios/:id', user.delete);
 };

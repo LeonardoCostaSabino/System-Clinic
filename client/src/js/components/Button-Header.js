@@ -17,7 +17,6 @@ export default class ButtonHeader extends React.Component {
         });
 ;    };
 
-
     render() {
 
         let linkStyle;

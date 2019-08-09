@@ -1,6 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
     const Funcionarios =  sequelize.define('funcionarios',{
-        ID: {
+        id: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -32,7 +32,7 @@ module.exports = (sequelize, Sequelize) => {
             required: true,
             references: {
                 model: 'pessoas',
-                key: 'ID'
+                key: 'id'
             }
         },
         createdAt: {

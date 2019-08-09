@@ -8,7 +8,7 @@ import FuncionariosFormFactory from './funcionarios';
 import PacientesFormFactory from './pacientes';
 import ProntuarioFormFactory from './prontuario';
 import DicomFormFactory from './dicom'; 
-import FormsMenuFactory from './FormsMenu';
+import FormsMenuFactory from './Menu';
 
 const ClinicasForm = ClinicasFormFactory(React, Row, Col, XPanel, PageTitle);
 const FuncionariosForm = FuncionariosFormFactory(React, Row, Col, XPanel, PageTitle);

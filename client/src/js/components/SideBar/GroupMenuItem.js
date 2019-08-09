@@ -1,13 +1,13 @@
-  import React, { Component } from 'react'
-import cn from 'classnames'
+import React, { Component } from 'react'
+import cn from "classnames"
 import childrenWithProps from '../childrenWithProps'
 
 class GroupMenuItem extends Component {
   render() {
     /* eslint no-unused-vars: 0 */
-    const { icon, title, shared, children, to, isActive, isactivesection, toggle } = this.props
-    const { activeGroup } = shared.getState()
-    const active = activeGroup === this
+    const { icon, title, shared, children, isActive, toggle } = this.props;
+    const { activeGroup } = shared.getState();
+    const active = activeGroup === this;
 
     return (
       <li className={ cn({ active }) }><a onClick={ () => toggle(this) }><i className={`fa fa-${icon}`}/> { title }
