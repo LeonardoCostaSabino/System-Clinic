@@ -6,16 +6,16 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Descricao: {
+        descricao: {
             type: Sequelize.STRING
         },
-        Limitacao: {
+        limitacao: {
             type: Sequelize.STRING
         },
-        Alergia: {
+        alergia: {
             type: Sequelize.STRING
         },
-        Paciente_id: {
+        paciente_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,
@@ -24,7 +24,7 @@ module.exports = (sequelize, Sequelize) => {
                 key: 'id'
             },
         },
-        Funcionario_id: {
+        funcionario_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,
@@ -33,7 +33,7 @@ module.exports = (sequelize, Sequelize) => {
                 key: 'id'
             },
         },
-        Consultas_id: {
+        consultas_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,

@@ -5,12 +5,12 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Nome: {
+        nome: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        Descricao: {
+        descricao: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false

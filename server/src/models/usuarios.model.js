@@ -6,18 +6,18 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        NickName: {
+        nickname: {
             type: Sequelize.STRING,
         },
-        Email: {
+        email: {
             type: Sequelize.STRING,
         },
-        Senha: {
+        senha: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        Acesso_id: {
+        acesso_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,

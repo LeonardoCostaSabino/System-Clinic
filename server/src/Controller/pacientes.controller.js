@@ -4,16 +4,58 @@ const Pacientes = db.pacientes;
 const Pessoas = db.pessoa;
 const Telefone = db.telefone;
 const Endereco = db.enderecos;
+const Usuarios = db.usuarios;
 
-// Post a User
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
     // Save to PostgreSQL database
-    Pacientes.create(req.body,{
-        include: Pessoas, Telefone, Endereco
-    }).then(pacientes => {
-        // Send created user to client
-        res.json(pacientes);
-    }).catch(err => {
+    return await db.sequelize.transaction(t => {
+        // chain all your queries here. make sure you return them.
+        return Endereco.create(req.body,{transaction: t}).then(result => {
+            return (ende_id = result.id,
+                Telefone.create(req.body,{transaction: t}).then(result => {
+                    return (tele_id = result.id,
+                        Usuarios.create(req.body,{transaction: t}).then(result => {
+                            return (use_id = result.id,
+                                Pessoas.create({
+                                    cpf: req.body.cpf,
+                                    rg: req.body.rg,
+                                    nome: req.body.nome,
+                                    genero: req.body.genero,
+                                    datanascimento: req.body.datanascimento,
+                                    endereco_id: ende_id,
+                                    telefone_id: tele_id,
+                                    usuario_id: use_id
+                                },{transaction: t} )
+                                    .then(pessoas => { pess_id = pessoas.id
+                                    },{transaction: t}).catch(err => {
+                                    console.log(err);
+                                    res.status(500).json({msg: "error", details: err});
+                                }))
+                        }, {transaction: t}).catch(err => {
+                            console.log(err);
+                            res.status(500).json({msg: "error", details: err});
+                        }))
+                }, {transaction: t}).catch(err => {
+                console.log(err);
+                res.status(500).json({msg: "error", details: err});
+            }))
+        }, {transaction: t}).catch(err => {
+            console.log(err);
+            res.status(500).json({msg: "error", details: err});
+        });
+    }).then(
+        result => {
+            return(
+                Pacientes.create({
+                    peso: req.body.peso,
+                    altura: req.body.altura,
+                    sangue: req.body.sangue,
+                    filiacao1: req.body.filiacao1,
+                    filiacao2: req.body.filiacao2,
+                    pessoas_id: pess_id
+                }).then(result => res.send(result))
+            )
+        }).catch(err => {
         console.log(err);
         res.status(500).json({msg: "error", details: err});
     });

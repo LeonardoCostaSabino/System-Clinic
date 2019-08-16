@@ -5,32 +5,32 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Data: {
+        data: {
             type: Sequelize.DATE,
             required:  true,
             allowNull: false
         },
-        Descricao: {
+        descricao: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        Borda: {
+        borda: {
             type: Sequelize.BOOLEAN,
             required: true,
             allowNull: false
         },
-        Estilo: {
+        estilo: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false
         },
-        Hora: {
+        hora: {
             type: Sequelize.TIME,
             required:  true,
             allowNull: false
         },
-        Funcionario_id: {
+        funcionario_id: {
             type: Sequelize.INTEGER,
             required:  true,
             allowNull: false,
@@ -39,7 +39,7 @@ module.exports = (sequelize, Sequelize) => {
                 key: 'id'
             }
         },
-        Paciente_id: {
+        paciente_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,

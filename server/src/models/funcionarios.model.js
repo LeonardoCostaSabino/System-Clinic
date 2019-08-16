@@ -5,28 +5,19 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        PIS: {
+        pis: {
             type: Sequelize.INTEGER
         },
-        Titulo_Ele: {
+        titulo_Ele: {
             type: Sequelize.INTEGER
         },
-        CRM: {
+        crm: {
             type: Sequelize.INTEGER,
         },
-        Especialidade: {
+        especialidade: {
             type: Sequelize.STRING,
         },
-        // Endereco_id: {
-        //     type: Sequelize.INTEGER,
-        //     allowNull: false,
-        //     required: true,
-        //     references: {
-        //         model: 'enderecos',
-        //         key: 'ID'
-        //     }
-        // },
-        Pessoas_id: {
+        pessoas_id: {
             type: Sequelize.INTEGER,
             allowNull: false,
             required: true,

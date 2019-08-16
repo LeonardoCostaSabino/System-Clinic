@@ -5,18 +5,14 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        DDD: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false
+        ddd: {
+            type: Sequelize.STRING,
         },
-        Telefone: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false
+        telefone: {
+            type: Sequelize.STRING,
         },
-        Celular: {
-            type: Sequelize.INTEGER,
+        celular: {
+            type: Sequelize.STRING,
         },
         createdAt: {
             type: Sequelize.DATE,

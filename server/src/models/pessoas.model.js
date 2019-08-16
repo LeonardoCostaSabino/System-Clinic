@@ -6,28 +6,28 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        CPF: {
-            type: Sequelize.INTEGER,
-            required: true,
-            allowNull: false
-        },
-        RG: {
-            type: Sequelize.INTEGER,
-        },
-        Nome: {
+        cpf: {
             type: Sequelize.STRING,
             required: true,
             allowNull: false
         },
-        Genero: {
+        rg: {
+            type: Sequelize.STRING,
+        },
+        nome: {
+            type: Sequelize.STRING,
+            required: true,
+            allowNull: false
+        },
+        genero: {
             type: Sequelize.STRING
         },
-        DataNascimento: {
-            type: Sequelize.DATE,
+        datanascimento: {
+            type: Sequelize.STRING,
             required: true,
             allowNull: true
         },
-        Endereco_id: {
+        endereco_id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 required: true,
@@ -36,7 +36,7 @@ module.exports = (sequelize, Sequelize) => {
                     key: 'id'
                 }
             },
-        Usuario_id: {
+        usuario_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false,
@@ -45,10 +45,14 @@ module.exports = (sequelize, Sequelize) => {
                 key: 'id'
             }
         },
-        Telefone_id: {
+        telefone_id: {
             type: Sequelize.INTEGER,
             required: true,
-            allowNull: true
+            allowNull: false,
+            references: {
+                model: 'telefones',
+                key: 'id'
+            }
         },
         createdAt: {
             type: Sequelize.DATE,

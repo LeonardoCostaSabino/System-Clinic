@@ -6,22 +6,22 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        Peso: {
-            type: Sequelize.FLOAT,
+        peso: {
+            type: Sequelize.STRING,
         },
-        Altura: {
-            type: Sequelize.FLOAT
-        },
-        Sangue: {
+        altura: {
             type: Sequelize.STRING
         },
-        Filiacao1: {
+        sangue: {
             type: Sequelize.STRING
         },
-        Filiacao2: {
+        filiacao1: {
             type: Sequelize.STRING
         },
-        Pessoas_id: {
+        filiacao2: {
+            type: Sequelize.STRING
+        },
+        pessoas_id: {
             type: Sequelize.INTEGER,
             required: true,
             allowNull: false

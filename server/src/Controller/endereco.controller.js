@@ -4,7 +4,7 @@ const Enderecos = db.enderecos;
 // Post a User
 exports.create = (req, res) => {
     // Save to PostgreSQL database
-    Enderecos.create(req.body).then(enderecos => {
+    Enderecos.create(req.body.logradouro).then(enderecos => {
         // Send created user to client
         res.json(enderecos);
     }).catch(err => {
