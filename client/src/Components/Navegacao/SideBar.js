@@ -4,6 +4,8 @@ import {Route, NavLink, HashRouter} from "react-router-dom";
 
 import '../../css/sidebar.css';
 import $ from "jquery";
+import axios from 'axios';
+
 
 class SideBar extends React.Component{
 
@@ -41,7 +43,7 @@ class SideBar extends React.Component{
     render() {
         return(
             <div className="page-wrapper chiller-theme toggled">
-                <a id="show-sidebar" className="btn btn-sm btn-dark">
+                <a id="show-sidebar" className="btn btn-xs btn-info">
                     <i className="fas fa-bars" />
                 </a>
                 <nav id="sidebar" className="sidebar-wrapper">
@@ -57,7 +59,7 @@ class SideBar extends React.Component{
                                 <img className="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture" />
                             </div>
                             <div className="user-info">
-                <span className="user-name">Nome
+                <span id="nameUser" className="user-name">Nome
                   <strong>Usuário</strong>
                 </span>
                                 <span className="user-role">Tipo de Acesso</span>

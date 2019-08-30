@@ -2,8 +2,10 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://leonardocostasabino.github.io/System-Clinic/.",
   "dependencies": {
     "axios": "^0.19.0",
+    "gh-pages": "^2.1.1",
     "install": "^0.13.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
@@ -20,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

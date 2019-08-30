@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs');
+
 module.exports = (sequelize, Sequelize) => {
     const User = sequelize.define('usuarios', {
         //ID do Cargo
@@ -34,9 +36,15 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.DATE,
             defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
         },
-    }, {
-        sequelize,
-        modelName: 'usuarios'
+    },{
+        instanceMethods: {
+            generateHash(senha) {
+                return bcrypt.hash(senha, bcrypt.genSaltSync(8));
+            },
+            validPassword(senha) {
+                return bcrypt.compare(senha, this.senha);
+            }
+        }
     });
     return User;
 }

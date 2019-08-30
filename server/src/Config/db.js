@@ -31,6 +31,7 @@ db.funcionario = require('../models/funcionarios.model')(sequelize, Sequelize);
 db.pacientes = require('../models/pacientes.model')(sequelize, Sequelize);
 db.consultas = require('../models/consultas.model')(sequelize, Sequelize);
 db.protuarios = require('../models/prontuarios.model')(sequelize, Sequelize);
+db.contatos = require('../models/contato.model')(sequelize, Sequelize);
 
 //Relations
 

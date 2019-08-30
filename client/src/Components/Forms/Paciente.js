@@ -226,16 +226,17 @@ export default class CadForm extends React.Component{
                 })
         );
     }
+
     render(){
         return(
             <Fragment>
-                <div className="card mt-3">
-                    <div className="text-center card-header cardbyhead">
-                        Cadastro de Pacientes
-                    </div>
-                    <div className="card-body cardby">
-                        <div className="row">
+                <div className="card">
+                    <div className="card-body bg-secondary">
+                        <div className="row ">
                             <form id="form-cad" className="form-row" onSubmit={this.submit} method="post">
+                                <div className="col-md-12 mb-3">
+                                <h3 className="text-center">Dados Pessoais</h3>
+                                </div>
                                 <div className="col-sm-3">
                                     <label>Nome Completo </label>
                                     <InputMask placeholder="Nome Completo..." name="nome" className="form-control"  onChange={this.handleInputChange}/>
@@ -252,27 +253,6 @@ export default class CadForm extends React.Component{
                                     <label>Data de Nascimento</label>
                                     <DatePickerInput displayFormat='DD/MM/YYYY' onChange={(jsDate, dateString) => this.setState({ datanascimento: dateString })} showOnInputClick locale='pt-BR' />
                                 </div>
-                                <div className="col-sm-2 mt-3">
-                                    <label>Peso</label>
-                                    <InputMask mask="999" maskChar="_" placeholder="Peso..." name="peso" className="form-control"  onChange={this.handleInputChange}/>
-                                </div>
-                                <div className="col-sm-2 mt-3">
-                                    <label>Altura</label>
-                                    <InputMask mask="9,99" maskChar="_" placeholder="Altura em metros..." name="altura" className="form-control"  onChange={this.handleInputChange}/>
-                                </div>
-                                <div className="col-sm-1 mt-3">
-                                    <label>Sangue</label>
-                                    <select className="form-control" name="sangue" onChange={this.handleInputChange}>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="A-">B-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                    </select>
-                                </div>
                                 <div className="col-sm-3 mt-3">
                                     <label>Filiação 1</label>
                                     <input  placeholder="Filiação..." name="filiacao1" className="form-control" onChange={this.handleInputChange}/>
@@ -281,12 +261,13 @@ export default class CadForm extends React.Component{
                                     <label>Filiação 2</label>
                                     <input  placeholder="Filiação..." name="filiacao2" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div  className=" form-check-inline col-sm-2">
-                                    <input type="radio" value="Masculino" name="genero" onChange={this.handleInputChange}/>
-                                    <label> Masculino </label>
-                                    <br/>
-                                    <input type="radio" value="Feminino" name="genero" onChange={this.handleInputChange}/>
-                                    <label> Feminino </label>
+                                <div className="btn-group btn-group-toggle form-check-inline  col-sm-2 ml-5" data-toggle="buttons">
+                                    <label className="btn btn-dark">
+                                        <input type="radio" name="options" id="option2" value="Masculino" name="genero" autoComplete="off"/> Masculino
+                                    </label>
+                                    <label className="btn btn-dark">
+                                        <input type="radio" name="options" id="option3" value="Feminino" name="genero"  autoComplete="off"/> Feminino
+                                    </label>
                                 </div>
                                 <div className="col-sm-1 mt-3">
                                     <label>DDD</label>
@@ -394,8 +375,10 @@ export default class CadForm extends React.Component{
                                     <label>Celular</label>
                                     <InputMask mask="99999-9999" maskChar="_" placeholder="Celular..." name="celular" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-md-3 mt-3"></div>
-                                <div className="col-sm-2 mt-3">
+                                <div className="col-md-12 mb-2 mt-2">
+                                    <h3 className="text-center mt-1">Endereços</h3>
+                                </div>
+                                <div className="col-sm-2">
                                     <label>Cep</label>
                                     <InputMask mask="99999999" maskChar="_" id="cep" placeholder="Cep.." name="cep" className="form-control" onBlur={this.pesquisa_cep} onChange={this.handleInputChange}/>
                                 </div>
@@ -416,15 +399,45 @@ export default class CadForm extends React.Component{
                                     <label>UF</label>
                                     <input readOnly placeholder="Estado..." name="uf" id="uf" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-sm-2 mt-3">
+                                <div className="col-md-12 mt-4">
+                                    <h3 className="text-center">Dados Específicos</h3>
+                                </div>
+                                <div className="col-sm-2">
+                                    <label>Peso</label>
+                                    <InputMask mask="999" maskChar="_" placeholder="Peso..." name="peso" className="form-control"  onChange={this.handleInputChange}/>
+                                </div>
+                                <div className="col-sm-2">
+                                    <label>Altura</label>
+                                    <InputMask mask="9,99" maskChar="_" placeholder="Altura em metros..." name="altura" className="form-control"  onChange={this.handleInputChange}/>
+                                </div>
+                                <div className="col-sm-1">
+                                    <label>Sangue</label>
+                                    <select className="form-control" name="sangue" onChange={this.handleInputChange}>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="A-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-12 mt-2">
+                                    <h3 className="text-center">Usuários</h3>
+                                </div>
+                                <div className="col-md-1 mt-3"></div>
+                                <div className="col-sm-2">
                                     <label>Nome do Usuário</label>
                                     <input placeholder="Apelido..." name="nickname" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-sm-2 mt-3">
+                                <div className="col-md-2 mt-3"></div>
+                                <div className="col-sm-2">
                                     <label>Email</label>
                                     <input placeholder="Email..." name="email" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-sm-2 mt-3">
+                                <div className="col-md-2 mt-3"></div>
+                                <div className="col-sm-2">
                                     <label>Senha</label>
                                     <input placeholder="Senha..." type="password" name="senha" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
@@ -432,9 +445,6 @@ export default class CadForm extends React.Component{
                                 <button type="reset" className="btn btn-lg btn-block btn-dark">Limpar</button>
                             </form>
                         </div>
-                    </div>
-                    <div class="cardbyhead text-center card-footer text-muted">
-                        Sistema de Gerenciamento de Clinicas SEB
                     </div>
                 </div>
             </Fragment>

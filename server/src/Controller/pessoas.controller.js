@@ -1,5 +1,4 @@
 const db = require('../Config/db.js');
-const Sequelize = require('sequelize');
 const Pessoas = db.pessoa;
 const Endereco = db.enderecos;
 const Telefone = db.telefone;
@@ -77,6 +76,7 @@ exports.findByPk = (req, res) => {
         res.status(500).json({msg: "error", details: err});
     });
 };
+
 
 // Update a User
 exports.update = (req, res) => {

@@ -10,11 +10,17 @@
   "author": "Peter Coles",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "i": "^0.3.6",
+    "nan": "^2.14.0",
+    "node-pre-gyp": "^0.13.0",
     "npm": "^6.10.3",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.11",
+    "passport-jwt": "^4.0.0",
     "pg": "^7.12.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.11.0"

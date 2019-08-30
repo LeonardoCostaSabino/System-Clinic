@@ -94,8 +94,9 @@ body {
     left: 0;
     top: 10px;
     border-radius: 0 4px 4px 0px;
-    width: 35px;
-    transition-delay: 0.3s;
+    /*width: 35px;*/
+    transition-delay: 0.2s;
+    z-index: 1800;
 }
 .page-wrapper.toggled #show-sidebar {
     left: -40px;
