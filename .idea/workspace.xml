@@ -2,58 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb578ac5-aa72-4468-8331-ca4612298b9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/Forms/CadastroUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/Forms/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Components/Navegacao/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/5bd308b7-d954-4023-a258-97019012d099_200x200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Atende.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Clinica.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Clinica2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Slide_1_home.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Slide_2_home.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/Slide_3_home.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/gettyimages-619636894-612x612.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/imageedit_2_8778304614.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/imageedit_4_3563760619.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Images/imageedit_6_8351019904.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Services/api-login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Services/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/css/caduser.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/DockerFile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Controller/contato.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Controller/login.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/Route/contato.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/models/contato.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Forms/Paciente.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Forms/Paciente.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Navegacao/Forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Navegacao/Forms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Navegacao/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Navegacao/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Navegacao/Root.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Navegacao/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/Navegacao/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Navegacao/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/css/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/css/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/css/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Controller/pessoas.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/pessoas.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/usuarios.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/usuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/usuarios.model.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +66,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Docker-Laravel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -128,19 +80,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/Images" />
-      <recent name="$PROJECT_DIR$/client/src/css" />
-      <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$/server/src/Route" />
-      <recent name="$PROJECT_DIR$/server" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/Images" />
       <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/server/python" />
       <recent name="$PROJECT_DIR$/client/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/Images" />
+      <recent name="$PROJECT_DIR$/client/src/css" />
+      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$/server/src/Route" />
+      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -245,7 +197,9 @@
       <workItem from="1566212236485" duration="14868000" />
       <workItem from="1566384034982" duration="16064000" />
       <workItem from="1566825271743" duration="11070000" />
-      <workItem from="1567005981232" duration="30734000" />
+      <workItem from="1567005981232" duration="30995000" />
+      <workItem from="1567425304360" duration="238000" />
+      <workItem from="1567597166531" duration="16284000" />
     </task>
     <task id="LOCAL-00001" summary="Revisão de arquivos(andamento)">
       <created>1564176526800</created>
@@ -331,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566212540915</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Atualização Layout">
+      <created>1567184818718</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567184818732</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +347,8 @@
     <MESSAGE value="Formulário de Pacientes pronto 2" />
     <MESSAGE value="Novo Layout SEP em andamento!!" />
     <MESSAGE value="Commi with new things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commi with new things" />
+    <MESSAGE value="Atualização Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização Layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

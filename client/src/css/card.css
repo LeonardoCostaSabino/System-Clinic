@@ -6,3 +6,21 @@
     background-color: #282c34;
     color: #25F193;
 }
+.olho {
+    width: 100%;
+}
+
+.tenta {
+    position: relative;
+    margin-bottom: 1em;
+}
+
+
+#show_password{
+     position: absolute;
+     bottom: 6px;
+     right: 10px;
+     border: none;
+     background-color: transparent;
+     font-size: 25px;
+ }

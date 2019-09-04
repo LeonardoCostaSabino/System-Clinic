@@ -28,6 +28,10 @@ class Home extends Component {
         });
     }
 
+    submit(){
+
+    }
+
     render() {
         return (
             <Fragment>

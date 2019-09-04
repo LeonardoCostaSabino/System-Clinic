@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react';
-import {Col, Row } from 'react-bootstrap';
 import InputMask from 'react-input-mask';
 import moment from 'moment';
 import 'moment/locale/pt'
 import 'rc-datepicker/lib/style.css';
 import { DatePickerInput } from 'rc-datepicker';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import axios from 'axios';
 import '../../css/card.css';
+import $ from "jquery";
 
 moment.locale('pt-br');
 
@@ -40,6 +40,31 @@ export default class CadForm extends React.Component{
         this.handleInputChange = this.handleInputChange.bind(this);
         this.pesquisa_cep = this.pesquisa_cep.bind(this);
         this.submit = this.submit.bind(this);
+        this.validar_Form = this.validar_Form.bind(this);
+        this.gerarSenha = this.gerarSenha.bind(this);
+    }
+
+    componentDidMount(){
+        $('#show_password').hover(function(e) {
+            e.preventDefault();
+            if ( $('#password').attr('type') == 'password' ) {
+                $('#password').attr('type', 'text');
+                $('#show_password').attr('class', 'fa fa-eye');
+            } else {
+                $('#password').attr('type', 'password');
+                $('#show_password').attr('class', 'fa fa-eye-slash');
+            }
+        })
+    }
+
+    gerarSenha(){
+        let newPassword = Math.random().toString(36).slice(-8);
+        document.getElementById('password').value = newPassword;
+        this.setState({
+            senha: newPassword
+        });
+        console.log(this.state.senha);
+
     }
 
     handleInputChange(event) {
@@ -87,7 +112,121 @@ export default class CadForm extends React.Component{
         }
     }
 
+    validar_Form(value,field_name,primary_rule,opcional_rule){
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 5000
+        });
+        let Error = 1;
+        switch (primary_rule){
+            case 'empty': {
+                if (value === "" || value == null) {
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não pode estar vazio"
+                    });
+                    return Error
+                }
+                break;
+            }
+            case 'length_8': {
+                if (value.length < 8) {
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não pode permanecer com tamanho menor que 8 caracteres"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'length_12': {
+                if (value.length < 12) {
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não pode permanecer com tamanho menor que 12 caracteres"
+                    });
+                    return Error;
+                }
+                break;
+            }
+        }
+        switch (opcional_rule) {
+            case 'regex_email': {
+                let regexEmail = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.?([a-z]+)?$/i;
+                if (!value.match(regexEmail)) {
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões : Exemplo: zignd.igor@gmail.com.br"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'regex_password': {
+                let regexPassword = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/i;
+                if (!value.match(regexPassword)) {
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões<br>Deve possuir pelo menos uma letra e um número!!"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'regex_cpf': {
+                var regexCpf = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
+                if (!value.match(regexCpf)){
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões!!"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'regex_telefone': {
+                var regexTel = /^(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
+                if (!value.match(regexTel)){
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões!!"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'regex_celular': {
+                var regexCel = /^(?:((?:9\d|[2-9])\d{4})\-?(\d{4}))$/;
+                if (!value.match(regexCel)){
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões!!"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'regex_cep': {
+                var regexCep = /^[0-9]{5}[\d]{3}$/;
+                if (!value.match(regexCep)){
+                    Toast.fire({
+                        type: 'error',
+                        title: "O campo "+field_name+" não está de acordo com padrões!!"
+                    });
+                    return Error;
+                }
+                break;
+            }
+            case 'existe': {
+                break;
+            }
+        }
+    }
+
     submit(event){
+
         event.preventDefault();
         const Toast = Swal.mixin({
             toast: true,
@@ -96,91 +235,20 @@ export default class CadForm extends React.Component{
             timer: 5000
         });
 
-        var validarNome;
-        var validarCPF;
-        var validarData;
-        var validarDDD;
-        var validarTel;
-        var validarCel;
-        var validarCep;
-        var validarUser;
-        var validarSenha;
-        if (this.state.nome == null || this.state.nome === ""){
-            validarNome = 'Campo de Nome<br>'
-        }
-        else{
-            validarNome = ''
-        }
-        if(this.state.cpf == null || this.state.cpf ===""){
-            validarCPF = 'Campo de Cpf<br>'
-        }else{
-            validarCPF = ''
-        }
-        if(this.state.datanascimento == null || this.state.datanascimento === ""){
-            validarData = 'Campo de Data de Nascimento<br>'
-        }else{
-            validarData = ""
-        }
-        if(this.state.ddd == null || this.state.ddd === ""){
-            validarDDD = 'Campo de DDD<br>'
-        }else{
-            validarDDD = ""
-        }
-        if(this.state.telefone == null || this.state.telefone === ""){
-            validarTel = 'Campo de Telefone<br>'
-        }else {
-            validarTel = ""
-        }
-        if(this.state.celular == null || this.state.celular === ""){
-            validarCel = 'Campo de Celular<br>'
-        }else {
-            validarCel = ""
-        }
-        if(this.state.cep == null || this.state.cep === ""){
-            validarCep = 'Campo de Cep<br>'
-        }else {
-            validarCep = ""
-        }
-        if(this.state.nickname == null || this.state.nickname === ""){
-            validarUser = 'Campo de Usuário<br>'
-        }else {
-            validarUser = ""
-        }
-        if(this.state.senha == null || this.state.senha === ""){
-            validarSenha = 'Campo de Senha<br>'
-        }else {
-            validarSenha = ""
-        }
-        Toast.fire({
-            type: 'error',
-            title: "Os campos não podem estar vazios: <br>"+validarNome +
-                validarCPF + validarData
-                + validarDDD + validarTel
-                + validarCel + validarCep
-                + validarUser + validarSenha
-        });
-        if (validarNome !== "" ||
-            validarCPF !== "" ||
-            validarData !== "" ||
-            validarDDD !== "" ||
-            validarTel !== "" ||
-            validarCel !== "" ||
-            validarCep !== "" ||
-            validarUser !== "" ||
-            validarSenha !== ""
-        ){
-            return 0;
-        }
-        var regexCpf = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
-        if (this.state.cpf.match(regexCpf)){
-            Toast.fire({
-                type: 'error',
-                title: "Cpf Errado"
-            });
-        }else {
-            return 0;
-        }
+        this.gerarSenha();
 
+        if(this.validar_Form(this.state.nome,"Nome",'empty') ||
+            this.validar_Form(this.state.cpf,"CPF",'empty', "regex_cpf") ||
+            this.validar_Form(this.state.rg,"RG",'empty') ||
+            this.validar_Form(this.state.datanascimento,"Data de Nascimento",'empty') ||
+            this.validar_Form(this.state.ddd,"DDD",'empty') ||
+            this.validar_Form(this.state.telefone,"Telefone",'empty',"regex_telefone") ||
+            this.validar_Form(this.state.celular,"Celular",'empty', "regex_celular") ||
+            this.validar_Form(this.state.cep,"CEP",'empty', "regex_cep") ||
+            this.validar_Form(this.state.nickname,"Nome de Usuário",'empty') ||
+            this.validar_Form(this.state.email,"Email",'empty', "regex_email")){
+            return 0;
+        }
         let form = JSON.stringify({
             cpf: this.state.cpf,
             rg: this.state.rg,
@@ -205,7 +273,6 @@ export default class CadForm extends React.Component{
             senha: this.state.senha,
             acesso_id: "1"
         });
-
         axios.post('http://localhost:8080/api/pacientes',form,
             {
                 headers: {
@@ -222,8 +289,16 @@ export default class CadForm extends React.Component{
                 Swal.fire({
                     title: 'Parabens',
                     type: 'success',
-                    text: 'Cadastro Realizado com sucesso!'
-                })
+                    text: 'Cadastro Realizado com sucesso'
+                }).then((result) => {
+                    Swal.fire({
+                        title: 'Senha Temporária',
+                        type: 'info',
+                        text: 'Sua Senha-Temporaria é: '+this.state.senha + " Mantenha guardada essa senha até o próximo" +
+                            " login pois no proximo será possivel altera-lo"
+                    })
+                }),
+            event.target.reset()
         );
     }
 
@@ -272,7 +347,7 @@ export default class CadForm extends React.Component{
                                 <div className="col-sm-1 mt-3">
                                     <label>DDD</label>
                                     <select className="form-control" name="ddd" onChange={this.handleInputChange}>
-                                        <option></option>
+                                        <option/>
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                         <option value="13">13</option>
@@ -382,7 +457,7 @@ export default class CadForm extends React.Component{
                                     <label>Cep</label>
                                     <InputMask mask="99999999" maskChar="_" id="cep" placeholder="Cep.." name="cep" className="form-control" onBlur={this.pesquisa_cep} onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-md-10 mt-3"></div>
+                                <div className="col-md-10 mt-3"/>
                                 <div className="col-sm-4 mt-3">
                                     <label>Logradouro</label>
                                     <input readOnly placeholder="Logradouro" name="logradouro" id="logra" className="form-control" onChange={this.handleInputChange}/>
@@ -426,20 +501,21 @@ export default class CadForm extends React.Component{
                                 <div className="col-md-12 mt-2">
                                     <h3 className="text-center">Usuários</h3>
                                 </div>
-                                <div className="col-md-1 mt-3"></div>
+                                <div className="col-md-1 mt-3"/>
                                 <div className="col-sm-2">
                                     <label>Nome do Usuário</label>
                                     <input placeholder="Apelido..." name="nickname" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-md-2 mt-3"></div>
+                                <div className="col-md-2 mt-3"/>
                                 <div className="col-sm-2">
                                     <label>Email</label>
                                     <input placeholder="Email..." name="email" className="form-control" onChange={this.handleInputChange}/>
                                 </div>
-                                <div className="col-md-2 mt-3"></div>
-                                <div className="col-sm-2">
+                                <div className="col-md-2 mt-3"/>
+                                <div className="col-sm-2 tenta">
                                     <label>Senha</label>
-                                    <input placeholder="Senha..." type="password" name="senha" className="form-control" onChange={this.handleInputChange}/>
+                                    <input placeholder="Senha..." id="password" type="password" name="senha" className="form-control" onChange={this.handleInputChange}/>
+                                    <button type="button" id="show_password" name="show_password" className="fa fa-eye-slash" aria-hidden="true"/>
                                 </div>
                                 <button type="submit" className="btn btn-lg btn-block btn-primary mt-3">Cadastrar</button>
                                 <button type="reset" className="btn btn-lg btn-block btn-dark">Limpar</button>
